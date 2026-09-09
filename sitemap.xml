@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://kurashi-annai.com/</loc><lastmod>2026-09-09</lastmod><priority>1.0</priority></url>
+  <url><loc>https://kurashi-annai.com/</loc><lastmod>2026-09-10</lastmod><priority>1.0</priority></url>
   <url><loc>https://kurashi-annai.com/junban/</loc><lastmod>2026-09-09</lastmod><priority>0.9</priority></url>
-  <url><loc>https://kurashi-annai.com/ie/</loc><lastmod>2026-09-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://kurashi-annai.com/katazuke/</loc><lastmod>2026-09-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://kurashi-annai.com/kuyou/</loc><lastmod>2026-09-09</lastmod><priority>0.8</priority></url>
-  <url><loc>https://kurashi-annai.com/souzoku/</loc><lastmod>2026-09-09</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kurashi-annai.com/ie/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kurashi-annai.com/katazuke/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kurashi-annai.com/souzoku/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kurashi-annai.com/kaigo/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://kurashi-annai.com/hikkoshi/</loc><lastmod>2026-09-10</lastmod><priority>0.8</priority></url>
   <url><loc>https://kurashi-annai.com/haka/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/jikka/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/kaitai/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/souzoku/souzoku-touki-hiyou-jibun-de/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/souzoku/shibougo-tetsuzuki-ichiran/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/sankotsu-houritsu-guideline/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kaigo/roujin-home-hiyou-souba/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/noukotsudou-hiyou-souba/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/souzoku/nenkin-shibou-tetsuzuki/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kaigo/kaigo-hoken-shinsei-nagare/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/katazuke/jitensha-shobun-houhou/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/ihai-shobun-houhou/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/hikkoshi/hikkoshi-tetsuzuki-ichiran/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/katazuke/hikkoshi-fuyouhin-shobun/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/hakajimai-hojokin-jichitai/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/hakajimai-hiyou-dare-ga-harau/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/hikkoshi/haisha-tetsuzuki-hiyou/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/kuyou/butsudan-shobun-houhou-hiyou/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://kurashi-annai.com/ie/akiya-kasai-hoken/</loc><lastmod>2026-09-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/souzoku/souzokuzei-kiso-koujo-ikura-kara/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/souzoku/souzoku-houki-tetsuzuki-kigen/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/katazuke/sodaigomi-dashikata-ryokin/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
@@ -59,6 +77,6 @@
   <url><loc>https://kurashi-annai.com/kuyou/hakajimai-kanriryo-tainou-muenbo/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/kuyou/hakajimai-hiyou-3tsu/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://kurashi-annai.com/kuyou/eitaikuyou-toha-wakariyasuku/</loc><lastmod>2026-09-09</lastmod><priority>0.7</priority></url>
-  <url><loc>https://kurashi-annai.com/articles/</loc><lastmod>2026-09-09</lastmod><priority>0.6</priority></url>
+  <url><loc>https://kurashi-annai.com/articles/</loc><lastmod>2026-09-10</lastmod><priority>0.6</priority></url>
   <url><loc>https://kurashi-annai.com/about/</loc><lastmod>2026-09-09</lastmod><priority>0.3</priority></url>
 </urlset>
