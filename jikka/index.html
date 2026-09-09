@@ -19,7 +19,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/", "parentOrganization": {"@type": "Organization", "name": "株式会社Adsym", "url": "https://adsym.jp/"}}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/jikka/#page", "url": "https://kurashi-annai.com/jikka/", "name": "実家と空き家。売る・貸す・壊すを手取りで比べる", "description": "相続した実家を売る・貸す・壊すのどれにするか。家財そのままで査定を取り、3つの出口を手取りで比べてから動く順番と、固定資産税、相続登記、空き家の3,000万円特別控除を整理する章です。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "実家と空き家", "item": "https://kurashi-annai.com/jikka/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/", "parentOrganization": {"@type": "Organization", "name": "株式会社Adsym", "url": "https://adsym.jp/"}}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/jikka/#page", "url": "https://kurashi-annai.com/jikka/", "name": "実家と空き家。売る・貸す・壊すを手取りで比べる", "description": "相続した実家を売る・貸す・壊すのどれにするか。家財そのままで査定を取り、3つの出口を手取りで比べてから動く順番と、固定資産税、相続登記、空き家の3,000万円特別控除を整理する章です。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "家と土地", "item": "https://kurashi-annai.com/ie/"}, {"@type": "ListItem", "position": 3, "name": "実家と空き家", "item": "https://kurashi-annai.com/jikka/"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTZ29WC1BH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NTZ29WC1BH");</script>
 <style>
 :root{--ink:#1f2933;--sub:#52606d;--line:#e4e7eb;--accent:#0b5fff;--bg:#fbfbfa;--card:#fff;--soft:#eef3ff}
@@ -95,16 +95,39 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 footer a{color:var(--sub)}
 footer ul{list-style:none;padding:0;margin:6px 0 0}
 footer li{margin:0 0 4px}
+/* トップ＝カテゴリ一覧 */
+.hero{padding:6px 0 4px}
+.hero h1{font-size:28px;margin:0 0 10px}
+.stats{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--sub);margin:0 0 16px}
+.stats b{font-size:18px;color:var(--ink);margin-right:2px}
+.catgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 0}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px}
+.cat .cat-h{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:18px;margin:0 0 6px}
+.cat .ico{font-size:22px}
+.cat p{margin:0 0 10px;font-size:13.5px;color:var(--sub)}
+.cat .chips{margin:0 0 10px}
+.chip.lnk{text-decoration:none}
+.chip.lnk:hover{background:var(--accent);color:#fff}
+.soonchip{color:#9aa5b1;background:#f0f4f8}
+.more{font-size:13.5px;font-weight:700;text-decoration:none}
+.feature{background:var(--soft);border-radius:14px;padding:18px 18px 14px;margin:18px 0 0}
+.feature .fl{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+.feature h2{font-size:19px;margin:4px 0 6px}
+.feature h2 a{color:var(--ink);text-decoration:none}
+.feature p{margin:0 0 8px;font-size:14px;color:var(--sub)}
+.hub.soon{color:#9aa5b1;border-style:dashed}
+.hub.soon b{color:#9aa5b1}
+@media (max-width:640px){.catgrid{grid-template-columns:1fr}.hero h1{font-size:23px}}
 @media (max-width:640px){h1{font-size:22px}.grid{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr}ol.order li{padding-left:50px}ol.order li::before{width:36px;height:36px;font-size:15px}ol.order li::after{left:17px}}
 </style>
 </head>
 <body>
 <header>
-<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/">くらし案内ドットコム</a><span class="tag">親と実家のあとしまつ、順番で。</span></div></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/">順番</a></li><li><a href="https://kurashi-annai.com/tetsuzuki/">手続き</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続</a></li><li><a href="https://kurashi-annai.com/butsudan/">仏壇</a></li><li><a href="https://kurashi-annai.com/haka/">墓</a></li><li><a href="https://kurashi-annai.com/jikka/" class="on">実家</a></li><li><a href="https://kurashi-annai.com/kaitai/">解体</a></li></ul></nav>
+<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/">くらし案内ドットコム</a><span class="tag">暮らしの困りごとを、相場と手順で案内します</span></div></div>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け</a></li><li><a href="https://kurashi-annai.com/kuyou/">供養・お墓</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/junban/">見送ったあとの順番</a></li></ul></nav>
 </header>
 <main><div class="wrap">
-<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › 実家と空き家</p><h1>実家と空き家。売る・貸す・壊すを手取りで比べる</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="answer"><b>結論</b><p>実家じまいの順番は「家財そのままで査定と見積を取る → 買取・仲介・解体して土地で売るの3つを手取りで比べる → 必要な分だけ片付け・解体する → 相続登記 → 引き渡し」です。費用は片付け（業者に頼むと3LDK以上の一軒家で50万〜100万円以上）、解体（木造30坪で90万〜200万円・必要な場合だけ）、相続登記の登録免許税（評価額の0.4%）、仲介手数料（上限は3%＋6万円＋税）の4項目で、前3つは出口の選び方で0円にもなります。固定資産税は毎年1月1日の状況で決まり、空き家のまま管理不全空家等の勧告を受けると住宅用地の特例が外れます。</p></div><div class="body"><p>実家をどうするかは、「片付けてから考える」と選択肢が減ります。順番はこうです。</p>
+<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 実家と空き家</p><h1>実家と空き家。売る・貸す・壊すを手取りで比べる</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="answer"><b>結論</b><p>実家じまいの順番は「家財そのままで査定と見積を取る → 買取・仲介・解体して土地で売るの3つを手取りで比べる → 必要な分だけ片付け・解体する → 相続登記 → 引き渡し」です。費用は片付け（業者に頼むと3LDK以上の一軒家で50万〜100万円以上）、解体（木造30坪で90万〜200万円・必要な場合だけ）、相続登記の登録免許税（評価額の0.4%）、仲介手数料（上限は3%＋6万円＋税）の4項目で、前3つは出口の選び方で0円にもなります。固定資産税は毎年1月1日の状況で決まり、空き家のまま管理不全空家等の勧告を受けると住宅用地の特例が外れます。</p></div><div class="body"><p>実家をどうするかは、「片付けてから考える」と選択肢が減ります。順番はこうです。</p>
 <ol>
 <li><strong>家財そのままで査定と見積を取る</strong>（名義が親のままでも取れる）</li>
 <li><strong>買取・仲介・解体して土地で売る、を手取りで比べる</strong></li>

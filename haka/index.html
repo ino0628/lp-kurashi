@@ -19,7 +19,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/", "parentOrganization": {"@type": "Organization", "name": "株式会社Adsym", "url": "https://adsym.jp/"}}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/haka/#page", "url": "https://kurashi-annai.com/haka/", "name": "墓じまいと供養。改葬許可は今お墓がある市区町村", "description": "墓じまいは法律上「改葬」で、今お墓がある市区町村の許可で進みます。費用は撤去・手続きとお寺・新しい納骨先の3つに分かれ、総額の目安は35万〜150万円。永代供養の年数、離檀料、改葬許可証の取り方までを整理する章です。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "墓じまいと供養", "item": "https://kurashi-annai.com/haka/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/", "parentOrganization": {"@type": "Organization", "name": "株式会社Adsym", "url": "https://adsym.jp/"}}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/haka/#page", "url": "https://kurashi-annai.com/haka/", "name": "墓じまいと供養。改葬許可は今お墓がある市区町村", "description": "墓じまいは法律上「改葬」で、今お墓がある市区町村の許可で進みます。費用は撤去・手続きとお寺・新しい納骨先の3つに分かれ、総額の目安は35万〜150万円。永代供養の年数、離檀料、改葬許可証の取り方までを整理する章です。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "供養とお墓", "item": "https://kurashi-annai.com/kuyou/"}, {"@type": "ListItem", "position": 3, "name": "墓じまいと供養", "item": "https://kurashi-annai.com/haka/"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTZ29WC1BH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NTZ29WC1BH");</script>
 <style>
 :root{--ink:#1f2933;--sub:#52606d;--line:#e4e7eb;--accent:#0b5fff;--bg:#fbfbfa;--card:#fff;--soft:#eef3ff}
@@ -95,16 +95,39 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 footer a{color:var(--sub)}
 footer ul{list-style:none;padding:0;margin:6px 0 0}
 footer li{margin:0 0 4px}
+/* トップ＝カテゴリ一覧 */
+.hero{padding:6px 0 4px}
+.hero h1{font-size:28px;margin:0 0 10px}
+.stats{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--sub);margin:0 0 16px}
+.stats b{font-size:18px;color:var(--ink);margin-right:2px}
+.catgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 0}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px}
+.cat .cat-h{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:18px;margin:0 0 6px}
+.cat .ico{font-size:22px}
+.cat p{margin:0 0 10px;font-size:13.5px;color:var(--sub)}
+.cat .chips{margin:0 0 10px}
+.chip.lnk{text-decoration:none}
+.chip.lnk:hover{background:var(--accent);color:#fff}
+.soonchip{color:#9aa5b1;background:#f0f4f8}
+.more{font-size:13.5px;font-weight:700;text-decoration:none}
+.feature{background:var(--soft);border-radius:14px;padding:18px 18px 14px;margin:18px 0 0}
+.feature .fl{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+.feature h2{font-size:19px;margin:4px 0 6px}
+.feature h2 a{color:var(--ink);text-decoration:none}
+.feature p{margin:0 0 8px;font-size:14px;color:var(--sub)}
+.hub.soon{color:#9aa5b1;border-style:dashed}
+.hub.soon b{color:#9aa5b1}
+@media (max-width:640px){.catgrid{grid-template-columns:1fr}.hero h1{font-size:23px}}
 @media (max-width:640px){h1{font-size:22px}.grid{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr}ol.order li{padding-left:50px}ol.order li::before{width:36px;height:36px;font-size:15px}ol.order li::after{left:17px}}
 </style>
 </head>
 <body>
 <header>
-<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/">くらし案内ドットコム</a><span class="tag">親と実家のあとしまつ、順番で。</span></div></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/">順番</a></li><li><a href="https://kurashi-annai.com/tetsuzuki/">手続き</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続</a></li><li><a href="https://kurashi-annai.com/butsudan/">仏壇</a></li><li><a href="https://kurashi-annai.com/haka/" class="on">墓</a></li><li><a href="https://kurashi-annai.com/jikka/">実家</a></li><li><a href="https://kurashi-annai.com/kaitai/">解体</a></li></ul></nav>
+<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/">くらし案内ドットコム</a><span class="tag">暮らしの困りごとを、相場と手順で案内します</span></div></div>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">供養・お墓</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/junban/">見送ったあとの順番</a></li></ul></nav>
 </header>
 <main><div class="wrap">
-<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › 墓じまいと供養</p><h1>墓じまいと供養。改葬許可は今お墓がある市区町村</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="answer"><b>結論</b><p>墓じまいとは、今のお墓から遺骨を取り出して墓石を撤去し、区画を返して、遺骨を別の場所に移すことです。法律上の名前は「改葬」で、今お墓がある市区町村の改葬許可を受けて進めます（墓地、埋葬等に関する法律5条）。最初に決めるのは新しい納骨先。費用は撤去・整地（1㎡あたり6.5万円〜の公表価格）、手続きとお寺（お布施3万〜10万円・離檀料3万〜20万円）、新しい納骨先（公営の合葬施設なら1体1万円前後〜6万円程度、樹木葬の平均71.7万円）の3つに分かれ、総額の目安は35万〜150万円です。期間は2〜3か月が目安。</p></div><div class="body"><p>墓じまいで迷うのは、費用よりも順番です。<strong>最初に決めるのは新しい納骨先</strong>で、それが決まると総額も改葬許可の申請もできるようになります。</p>
+<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">供養とお墓</a> › 墓じまいと供養</p><h1>墓じまいと供養。改葬許可は今お墓がある市区町村</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="answer"><b>結論</b><p>墓じまいとは、今のお墓から遺骨を取り出して墓石を撤去し、区画を返して、遺骨を別の場所に移すことです。法律上の名前は「改葬」で、今お墓がある市区町村の改葬許可を受けて進めます（墓地、埋葬等に関する法律5条）。最初に決めるのは新しい納骨先。費用は撤去・整地（1㎡あたり6.5万円〜の公表価格）、手続きとお寺（お布施3万〜10万円・離檀料3万〜20万円）、新しい納骨先（公営の合葬施設なら1体1万円前後〜6万円程度、樹木葬の平均71.7万円）の3つに分かれ、総額の目安は35万〜150万円です。期間は2〜3か月が目安。</p></div><div class="body"><p>墓じまいで迷うのは、費用よりも順番です。<strong>最初に決めるのは新しい納骨先</strong>で、それが決まると総額も改葬許可の申請もできるようになります。</p>
 <ul>
 <li><strong>改葬許可</strong>は今お墓がある市区町村が出す。お寺の同意は法律上の要件ではない</li>
 <li><strong>費用</strong>は3つに分かれ、差の大半は納骨先で決まる</li>

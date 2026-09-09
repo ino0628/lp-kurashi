@@ -19,7 +19,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/", "parentOrganization": {"@type": "Organization", "name": "株式会社Adsym", "url": "https://adsym.jp/"}}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/tetsuzuki/#page", "url": "https://kurashi-annai.com/tetsuzuki/", "name": "亡くなった後の手続き。最初の14日と3か月に締切が集まる", "description": "死亡届は7日以内、年金と健康保険の届出は10〜14日以内、相続放棄は3か月以内。亡くなった直後にやる手続きを、期限の早い順に整理する章です。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "亡くなった後の手続き", "item": "https://kurashi-annai.com/tetsuzuki/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/", "parentOrganization": {"@type": "Organization", "name": "株式会社Adsym", "url": "https://adsym.jp/"}}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/tetsuzuki/#page", "url": "https://kurashi-annai.com/tetsuzuki/", "name": "亡くなった後の手続き。最初の14日と3か月に締切が集まる", "description": "死亡届は7日以内、年金と健康保険の届出は10〜14日以内、相続放棄は3か月以内。亡くなった直後にやる手続きを、期限の早い順に整理する章です。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "相続と手続き", "item": "https://kurashi-annai.com/souzoku/"}, {"@type": "ListItem", "position": 3, "name": "亡くなった後の手続き", "item": "https://kurashi-annai.com/tetsuzuki/"}]}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTZ29WC1BH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-NTZ29WC1BH");</script>
 <style>
 :root{--ink:#1f2933;--sub:#52606d;--line:#e4e7eb;--accent:#0b5fff;--bg:#fbfbfa;--card:#fff;--soft:#eef3ff}
@@ -95,23 +95,46 @@ footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 footer a{color:var(--sub)}
 footer ul{list-style:none;padding:0;margin:6px 0 0}
 footer li{margin:0 0 4px}
+/* トップ＝カテゴリ一覧 */
+.hero{padding:6px 0 4px}
+.hero h1{font-size:28px;margin:0 0 10px}
+.stats{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--sub);margin:0 0 16px}
+.stats b{font-size:18px;color:var(--ink);margin-right:2px}
+.catgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 0}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px}
+.cat .cat-h{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);font-size:18px;margin:0 0 6px}
+.cat .ico{font-size:22px}
+.cat p{margin:0 0 10px;font-size:13.5px;color:var(--sub)}
+.cat .chips{margin:0 0 10px}
+.chip.lnk{text-decoration:none}
+.chip.lnk:hover{background:var(--accent);color:#fff}
+.soonchip{color:#9aa5b1;background:#f0f4f8}
+.more{font-size:13.5px;font-weight:700;text-decoration:none}
+.feature{background:var(--soft);border-radius:14px;padding:18px 18px 14px;margin:18px 0 0}
+.feature .fl{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.06em}
+.feature h2{font-size:19px;margin:4px 0 6px}
+.feature h2 a{color:var(--ink);text-decoration:none}
+.feature p{margin:0 0 8px;font-size:14px;color:var(--sub)}
+.hub.soon{color:#9aa5b1;border-style:dashed}
+.hub.soon b{color:#9aa5b1}
+@media (max-width:640px){.catgrid{grid-template-columns:1fr}.hero h1{font-size:23px}}
 @media (max-width:640px){h1{font-size:22px}.grid{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr}ol.order li{padding-left:50px}ol.order li::before{width:36px;height:36px;font-size:15px}ol.order li::after{left:17px}}
 </style>
 </head>
 <body>
 <header>
-<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/">くらし案内ドットコム</a><span class="tag">親と実家のあとしまつ、順番で。</span></div></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/">順番</a></li><li><a href="https://kurashi-annai.com/tetsuzuki/" class="on">手続き</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続</a></li><li><a href="https://kurashi-annai.com/butsudan/">仏壇</a></li><li><a href="https://kurashi-annai.com/haka/">墓</a></li><li><a href="https://kurashi-annai.com/jikka/">実家</a></li><li><a href="https://kurashi-annai.com/kaitai/">解体</a></li></ul></nav>
+<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/">くらし案内ドットコム</a><span class="tag">暮らしの困りごとを、相場と手順で案内します</span></div></div>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け</a></li><li><a href="https://kurashi-annai.com/kuyou/">供養・お墓</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/junban/">見送ったあとの順番</a></li></ul></nav>
 </header>
 <main><div class="wrap">
-<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › 亡くなった後の手続き</p><h1>亡くなった後の手続き。最初の14日と3か月に締切が集まる</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="answer"><b>結論</b><p>亡くなった直後の手続きは、期限の早い順に並べると迷いません。死亡届（7日以内・戸籍法86条）、年金の死亡届（国民年金14日以内・厚生年金10日以内）、国民健康保険の資格喪失（14日以内）、そして相続放棄を選ぶなら家庭裁判所へ3か月以内（民法915条）。この3か月の判断が、あとの片付け・相続登記・解体の全部に効きます。</p></div><div class="body"><p>亡くなった直後は、葬儀と並行して役所の手続きが続きます。全部を一度にやる必要はなく、<strong>期限の早い順</strong>に3つの山があります。</p>
+<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/souzoku/">相続と手続き</a> › 亡くなった後の手続き</p><h1>亡くなった後の手続き。最初の14日と3か月に締切が集まる</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="answer"><b>結論</b><p>亡くなった直後の手続きは、期限の早い順に並べると迷いません。死亡届（7日以内・戸籍法86条）、年金の死亡届（国民年金14日以内・厚生年金10日以内）、国民健康保険の資格喪失（14日以内）、そして相続放棄を選ぶなら家庭裁判所へ3か月以内（民法915条）。この3か月の判断が、あとの片付け・相続登記・解体の全部に効きます。</p></div><div class="body"><p>亡くなった直後は、葬儀と並行して役所の手続きが続きます。全部を一度にやる必要はなく、<strong>期限の早い順</strong>に3つの山があります。</p>
 <ol>
 <li><strong>7日以内</strong>：死亡届（葬儀社が代行することが多い）</li>
 <li><strong>10〜14日以内</strong>：年金の死亡届、健康保険の資格喪失、世帯主の変更</li>
 <li><strong>3か月以内</strong>：相続放棄をするかどうかの判断（家庭裁判所）</li>
 </ol>
 <p>3つ目が、このサイトの他の章に効いてきます。相続放棄を考えているなら、実家の片付けや解体に手を付ける前に専門家に相談してください。相続財産の処分にあたるおそれがあるからです（民法921条1号）。</p>
-<p>この章では、期限のある手続きを1つずつ、根拠の条文と提出先つきで書いていきます。</p></div><div class="soon">この章の記事は、順番に公開していきます。先に「<a href="https://kurashi-annai.com/">順番の1画面</a>」で全体の流れをご覧ください。</div><div class="author"><b>誰が・何を見て書いているか</b><br>くらし案内ドットコム事務局（株式会社Adsym）が、法令（e-Gov）・省庁・自治体・公表額のある事業者の公式ページを出典に書き、別の担当が出典を開き直して突合する校閲を通してから公開しています。数字は幅で書き、一次資料が無い相場は「事業者の公表相場」と性格を明記します。内容は「2026年 最新版」の時点の法令・制度に基づきます。</div>
+<p>この章では、期限のある手続きを1つずつ、根拠の条文と提出先つきで書いていきます。</p></div><div class="soon">この章の記事は、順番に公開していきます。先に「<a href="https://kurashi-annai.com/junban/">見送ったあとの順番</a>」もどうぞ。</div><div class="author"><b>誰が・何を見て書いているか</b><br>くらし案内ドットコム事務局（株式会社Adsym）が、法令（e-Gov）・省庁・自治体・公表額のある事業者の公式ページを出典に書き、別の担当が出典を開き直して突合する校閲を通してから公開しています。数字は幅で書き、一次資料が無い相場は「事業者の公表相場」と性格を明記します。内容は「2026年 最新版」の時点の法令・制度に基づきます。</div>
 </div></main>
 <footer><div class="wrap">
 <div class="cols">
