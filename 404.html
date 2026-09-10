@@ -141,16 +141,39 @@ footer a{color:var(--sub)}
 footer ul{list-style:none;padding:0;margin:6px 0 0}
 footer li{margin:0 0 4px}
 @media (max-width:720px){h1{font-size:22px}.hero{grid-template-columns:1fr}.hero h1{font-size:24px}.hero img{order:-1}.trust{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr;gap:10px}.tile b{font-size:15px}.grid,.cards{grid-template-columns:1fr}.feature{grid-template-columns:1fr}footer .cols{grid-template-columns:1fr}ol.order li{padding-left:50px}ol.order li::before{width:36px;height:36px;font-size:15px}ol.order li::after{left:17px}}
+/* 検索 */
+.srch{display:flex;gap:8px;padding:0 0 10px}
+.srch input{flex:1;min-width:0;height:42px;border:1.5px solid var(--line);border-radius:12px;padding:0 14px;font-size:15px;background:#fff;color:var(--ink);-webkit-appearance:none;appearance:none}
+.srch input:focus{outline:2px solid var(--accent);border-color:transparent}
+.srch button{height:42px;padding:0 16px;border:0;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap}
+.srch.big{padding:0;margin:0 0 6px}
+.srch.big input{height:52px;font-size:16px;border-color:var(--accent);box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.srch.big input::placeholder{color:#9aa5b1}
+.srch.big button{height:52px;padding:0 20px;font-size:15px}
+.ex{font-size:12.5px;color:var(--sub);margin:6px 0 0;line-height:2}
+.ex a{color:var(--accent);text-decoration:none;margin-right:10px;white-space:nowrap}
+.rs{margin:14px 0 0}
+.rs .cnt{font-size:14px;color:var(--sub);margin:0 0 8px}
+.rs .r{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 10px;text-decoration:none;color:var(--ink)}
+.rs .r:hover{border-color:var(--accent)}
+.rs .r b{display:block;font-size:15.5px;line-height:1.5;margin:0 0 4px}
+.rs .r span{display:block;font-size:13px;color:var(--sub);line-height:1.6}
+.rs .r em{display:inline-block;font-style:normal;font-size:11.5px;font-weight:700;color:var(--accent);background:var(--soft);border-radius:999px;padding:1px 8px;margin:6px 0 0}
+mark{background:#fff0b3;color:inherit;padding:0 1px;border-radius:3px}
+.fchips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}
+.fchips button{border:1px solid var(--line);background:#fff;color:var(--sub);font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 12px;cursor:pointer}
+.fchips button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+@media (max-width:720px){.srch button{padding:0 13px}.srch.big input{height:48px;font-size:15px}.srch.big button{height:48px}}
 
 </style>
 </head>
 <body>
 <header>
-<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark">く</span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div></div>
+<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark">く</span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
 <nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
 </header>
 <main><div class="wrap">
-<h1>お探しのページが見つかりませんでした</h1><p class="lead">アドレスが変わったか、削除された可能性があります。分類から探すか、記事の一覧をご覧ください。</p><div class="grid"><a class="hub" href="https://kurashi-annai.com/ie/"><b>家と土地</b><span>売る・貸す・壊す、解体の相場、固定資産税、修繕</span></a><a class="hub" href="https://kurashi-annai.com/katazuke/"><b>片付けと不用品</b><span>不用品を売る・処分する、遺品整理、掃除</span></a><a class="hub" href="https://kurashi-annai.com/kuyou/"><b>お墓と供養</b><span>お墓・永代供養・仏壇・法事</span></a><a class="hub" href="https://kurashi-annai.com/souzoku/"><b>相続と手続き</b><span>相続の手続き、登記、税金、亡くなった後の届出</span></a><a class="hub" href="https://kurashi-annai.com/kaigo/"><b>介護とシニアの暮らし</b><span>施設の探し方、介護保険、見守り</span></a><a class="hub" href="https://kurashi-annai.com/hikkoshi/"><b>引っ越し・車・その他</b><span>引っ越し、車の処分、ペット、保険と年金</span></a></div><p class="go" style="margin:18px 0 0"><a href="https://kurashi-annai.com/articles/">すべての記事を見る →</a>　<a href="https://kurashi-annai.com/">トップへ</a></p>
+<h1>お探しのページが見つかりませんでした</h1><p class="lead">アドレスが変わったか、削除された可能性があります。言葉で検索するか、分類からお探しください。</p><form class="srch big" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="困りごとを言葉で入力（例：粗大ごみ 料金）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form><p class="ex">例：<a href="https://kurashi-annai.com/search/?q=%E7%9B%B8%E7%B6%9A%E6%94%BE%E6%A3%84%20%E6%9C%9F%E9%99%90">相続放棄 期限</a><a href="https://kurashi-annai.com/search/?q=%E7%B2%97%E5%A4%A7%E3%81%94%E3%81%BF%20%E6%96%99%E9%87%91">粗大ごみ 料金</a><a href="https://kurashi-annai.com/search/?q=%E5%A2%93%E3%81%98%E3%81%BE%E3%81%84%20%E8%B2%BB%E7%94%A8">墓じまい 費用</a><a href="https://kurashi-annai.com/search/?q=%E4%BB%8B%E8%AD%B7%E4%BF%9D%E9%99%BA%20%E7%94%B3%E8%AB%8B">介護保険 申請</a><a href="https://kurashi-annai.com/search/?q=%E8%A7%A3%E4%BD%93%20%E8%B2%BB%E7%94%A8">解体 費用</a></p><div class="grid" style="margin-top:18px"><a class="hub" href="https://kurashi-annai.com/ie/"><b>家と土地</b><span>売る・貸す・壊す、解体の相場、固定資産税、修繕</span></a><a class="hub" href="https://kurashi-annai.com/katazuke/"><b>片付けと不用品</b><span>不用品を売る・処分する、遺品整理、掃除</span></a><a class="hub" href="https://kurashi-annai.com/kuyou/"><b>お墓と供養</b><span>お墓・永代供養・仏壇・法事</span></a><a class="hub" href="https://kurashi-annai.com/souzoku/"><b>相続と手続き</b><span>相続の手続き、登記、税金、亡くなった後の届出</span></a><a class="hub" href="https://kurashi-annai.com/kaigo/"><b>介護とシニアの暮らし</b><span>施設の探し方、介護保険、見守り</span></a><a class="hub" href="https://kurashi-annai.com/hikkoshi/"><b>引っ越し・車・その他</b><span>引っ越し、車の処分、ペット、保険と年金</span></a></div><p class="go" style="margin:18px 0 0"><a href="https://kurashi-annai.com/articles/">すべての記事を見る →</a>　<a href="https://kurashi-annai.com/">トップへ</a></p>
 </div></main>
 <footer><div class="wrap">
 <div class="cols">
