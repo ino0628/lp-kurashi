@@ -204,6 +204,14 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
+.chgs{border-top:1px solid var(--line)}
+.chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.chg .w{font-size:14px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:1px}
+.chg b{display:block;font-size:16px;line-height:1.5}
+.chg .t span{display:block;font-size:14px;color:var(--sub);line-height:1.6}
+.chg:hover b{color:var(--accent)}
+@media (max-width:720px){.chg{grid-template-columns:1fr}}
 @media (max-width:720px){h1{font-size:24px}.body h2{font-size:20px}.cards,.grid{grid-template-columns:1fr}}
 
 </style>
