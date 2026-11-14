@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/katazuke/">片付けと不用品</a> › パソコンの処分方法。粗大ごみに出せない理由と、無料になる条件・データ消去の順番</p><h1>パソコンの処分方法。粗大ごみに出せない理由と、無料になる条件・データ消去の順番</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/pasokon-shobun-houhou.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">家庭のパソコンは、多くの市町村で粗大ごみとして出せません。</p><p class="a2">資源有効利用促進法の指定再資源化製品にパーソナルコンピュータが入っていて（同法施行令別表第六）、メーカーが自主回収するからです。2003年10月以降に売られた家庭向けパソコンにはPCリサイクルマークが付いていて、この場合はメーカーが無償で回収します（パソコン3R推進協会）。マークが無い分は回収再資源化料金がかかり、自作機や倒産したメーカーの機種は同協会が回収します。料金は税込1台で、デスクトップ本体・ノート・液晶ディスプレイが4,400円、ブラウン管ディスプレイとその一体型が5,500円です。長さ30cm未満なら自治体の小型家電回収ボックスにも出せます（横浜市の例）。データの消去は、渡す前に自分で済ませます。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">パソコンを粗大ごみに出せないのはなぜか</a></li><li><a href="#pc">PCリサイクルマークがあれば、メーカーが無料で回収する</a></li><li><a href="#14400">メーカーが無いパソコンは、協会が1台4,400円から回収する</a></li><li><a href="#_2">自治体の回収ボックスと、国の認定事業者による回収</a></li><li><a href="#_3">データ消去は「初期化」では終わらない</a></li><li><a href="#4">ディスプレイ・プリンター・家電4品目の扱い</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>買い替えて古い1台が余った。実家を片付けていたら押し入れから出てきた。どちらの場合も、最初の分かれ道は同じです。<strong>パソコンは、多くの市町村で<a href="https://kurashi-annai.com/katazuke/sodaigomi-dashikata-ryokin/">粗大ごみ</a>として引き取ってもらえません</strong>。</p>

@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 墓じまいの補助金はどこにあるか。市営霊園を返す3市の実例と上限15万〜44万円</p><h1>墓じまいの補助金はどこにあるか。市営霊園を返す3市の実例と上限15万〜44万円</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/cat_kuyou.jpg" alt="" width="768" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">墓じまいの補助金は、自治体が自分の霊園の無縁化を防ぐために設けた制度です。</p><p class="a2">国の制度はありません（厚生労働省の「墓地・埋葬等のページ」に並ぶのは法令・通知と統計です）。千葉県浦安市は原状回復に要した費用に上限15万円、群馬県太田市は撤去費用の総額か20万円のいずれか低い方、千葉県市川市は区画に応じて7万5,000円〜44万円（予算額に達して受付終了）。いずれもその市の霊園を返すことが条件で、寺院の境内墓地や民営霊園は対象になりません。申請の順番は市によって逆になるので、工事を頼む前に、お墓のある市区町村の公式ページを確かめてください。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">国の補助金は無い。あるのは自治体の霊園の制度</a></li><li><a href="#315207500044">実例3市。上限15万円・20万円・7万5,000円〜44万円</a></li><li><a href="#3">条件は3つの型に収まる</a></li><li><a href="#_2">申請の順番は市によって逆になる</a></li><li><a href="#_3">東京都には、補助金ではないが墓所を返せる道がある</a></li><li><a href="#_4">補助金が無くても総額は下げられる</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p><a href="https://kurashi-annai.com/kuyou/hakajimai-toha-zentai/">墓じまい</a>の費用を調べていると「補助金が出る自治体がある」という話に行き当たります。本当にあります。ただし、どこにでもあるわけではなく、条件もはっきり決まっています。</p>

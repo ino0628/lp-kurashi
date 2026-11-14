@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 実家を売ったときの税金の計算。取得費が分からない家の5%、3,000万円の特例、長期譲渡の20.315%</p><h1>実家を売ったときの税金の計算。取得費が分からない家の5%、3,000万円の特例、長期譲渡の20.315%</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/jikka-baikyaku-zeikin-keisan.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">実家を売ったときの税金は、①譲渡所得（売った金額 − 取得費 − 譲渡費用）を出し、②使える特例（空き家の3,000万円特別控除など）を引き、③残った金額に税率をかける、の順で計算します。</p><p class="a2">親が取得した金額が分からない場合、国税庁は「売った金額の5パーセント相当額を取得費とすることができます」としており、実際の取得費が5%より少ない場合も5%を使えます。税率は、譲渡した年の1月1日時点の所有期間が5年を超える長期譲渡なら所得税15%（復興特別所得税2.1%を含めて15.315%）＋住民税5%＝20.315%。相続した家は親の取得日から所有期間を数えるので、多くは長期です。条件を満たせば空き家の3,000万円特別控除（国税庁No.3306）で譲渡所得から3,000万円を引けるため、売却2,000万円の実家なら税額が0円になることもあります。</p></div><details class="toc"><summary>この記事の流れ（6項目）</summary><ol><li><a href="#1">第1段階：利益（譲渡所得）を出す</a></li><li><a href="#23000">第2段階：特例を引く（空き家の3,000万円特別控除）</a></li><li><a href="#3">第3段階：税率をかける</a></li><li><a href="#2000">計算例：売却2,000万円、取得費が分からない実家</a></li><li><a href="#_1">売る前に決めておくこと</a></li><li><a href="#_2">まとめ</a></li></ol></details><div class="body"><p>「実家を売ったら、税金はいくらかかるのか」。売る前に知っておかないと、手取りの見込みが大きく狂います。計算は3段階です。<strong>利益を出す → 特例を引く → 税率をかける</strong>。</p>

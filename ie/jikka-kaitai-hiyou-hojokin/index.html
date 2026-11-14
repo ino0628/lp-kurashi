@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 実家の解体費用はいくら？ 木造30坪の相場、付帯工事、自治体の補助金（着工前の申請が条件）</p><h1>実家の解体費用はいくら？ 木造30坪の相場、付帯工事、自治体の補助金（着工前の申請が条件）</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/jikka-kaitai-hiyou-hojokin.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">木造一戸建ての解体費用は坪3万〜7万円が事業者の公表相場で、30坪なら本体の解体だけで90万〜200万円が目安です。</p><p class="a2">残置物の処分（1㎡あたり8,000円〜1万円）、ブロック塀や庭木・庭石の撤去は別料金で、道が狭く重機が入らない家は割高になります。老朽空き家の解体に工事費の3分の1〜5分の4（上限20万〜150万円程度）を補助する自治体があり、いずれも着工前に申請して交付決定を受けることが条件です。年度予算の先着順で、途中で受付が終わる制度もあります。解体して更地にすると固定資産税の住宅用地の特例が外れ、土地の課税標準が最大6倍になるため、解体は売却の目処と手取りを見てから決めるのが順番です。</p></div><details class="toc"><summary>この記事の流れ（6項目）</summary><ol><li><a href="#_1">解体費用の相場は「構造 × 坪数」</a></li><li><a href="#_2">見積で膨らむのは「付帯工事」</a></li><li><a href="#_3">自治体の補助金は「着工前の申請」が絶対条件</a></li><li><a href="#_4">解体を先にしてはいけない理由</a></li><li><a href="#301000">計算例：木造30坪、更地なら1,000万円で売れる土地</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p>「建物が傷んでいて、解体しないと売れないと言われた」。その一言で百万円単位の出費が先に決まってしまうのが、<a class="il" href="https://kurashi-annai.com/ie/jikkajimai-toha-hiyou-zentai/">実家じまい</a>でよくある損の一つです。解体が必要なケースは確かにありますが、費用の相場と、解体しない選択肢を知ってから決めるべきです。</p>

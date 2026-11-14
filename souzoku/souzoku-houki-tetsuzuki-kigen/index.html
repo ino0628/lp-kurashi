@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/souzoku/">相続と手続き</a> › 相続放棄の手続きと期限。3か月以内に家庭裁判所へ、費用は収入印紙800円</p><h1>相続放棄の手続きと期限。3か月以内に家庭裁判所へ、費用は収入印紙800円</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/souzoku-houki-tetsuzuki-kigen.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">相続放棄をすると、その相続については初めから相続人とならなかったものとみなされます（民法939条）。</p><p class="a2">借金だけを外すことはできず、プラスの財産も一緒に手放します。期限は「自己のために相続の開始があったことを知った時から3か月以内」（民法915条1項）。申述先は被相続人の最後の住所地の家庭裁判所で、費用は申述人1人につき収入印紙800円と連絡用の郵便切手です（裁判所）。3か月で判断できないときは、同じ3か月の中で期間の伸長を申し立てられます。遺産を処分すると単純承認とみなされ、放棄できなくなります（民法921条）。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">相続放棄は「初めから相続人でなかったこと」にする手続き</a></li><li><a href="#3">期限は知った時から3か月。数え方と、伸ばす方法</a></li><li><a href="#800">どこに、何を出すか。費用は収入印紙800円と郵便切手</a></li><li><a href="#_2">遺産に手を付けると放棄できなくなる</a></li><li><a href="#_3">放棄した後のこと（管理と、次の順位の人）</a></li><li><a href="#3_1">限定承認との違いと、3か月を過ぎてしまったとき</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>親が亡くなって、あとから借金の督促状が出てきた。あるいは、長く会っていない親族が亡くなって、知らないうちに自分が相続人になっていた。相続放棄には「知った時から3か月」という短い期限があり、その間に遺産へ手を付けてしまうと、もう放棄はできません。</p>

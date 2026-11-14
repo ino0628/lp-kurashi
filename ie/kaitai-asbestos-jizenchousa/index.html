@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 解体前のアスベスト事前調査。2023年10月から有資格者が必要です</p><h1>解体前のアスベスト事前調査。2023年10月から有資格者が必要です</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kaitai-asbestos-jizenchousa.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">建物を解体する前の石綿（アスベスト）事前調査は、2023年10月1日に着工する工事から、建築物石綿含有建材調査者などの有資格者が行うことになりました。</p><p class="a2">調査は原則として規模の大小にかかわらず、解体に係る部分のすべての材料について必要です。解体部分の延べ床面積が80㎡以上なら、元請事業者が所轄の労働基準監督署と都道府県知事へ電子システムで報告し、調査結果の記録は3年間保存します。2006年9月1日から石綿を0.1%を超えて含む物の製造・使用が禁止されたため、それ以前の建物ほど、調べて確かめる意味があります。</p></div><details class="toc"><summary>この記事の流れ（6項目）</summary><ol><li><a href="#202310">2023年10月から、調査は資格を持った人が行う</a></li><li><a href="#3">資格は3種類ある</a></li><li><a href="#200691">「2006年9月1日」が分かれ目</a></li><li><a href="#_1">費用はどのくらいか</a></li><li><a href="#3_1">依頼する側が確かめる3つのこと</a></li><li><a href="#_2">まとめ</a></li></ol></details><div class="body"><p>家を壊す前に、石綿（アスベスト）を含む建材が使われていないかを調べる「事前調査」が必要です。2023年（令和5年）10月1日に着工する工事からは、この調査を<strong>資格を持った人が行う</strong>ことになりました。調査は原則として建物の規模を問わず、解体に係る部分のすべての材料について必要です。費用は、調査そのものは数万円、除去が必要になると数十万円から数百万円と、幅がとても大きくなります。</p>

@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/souzoku/">相続と手続き</a> › 準確定申告とは？亡くなった方の所得税を4か月以内に。必要な人・書類・還付になる例</p><h1>準確定申告とは？亡くなった方の所得税を4か月以内に。必要な人・書類・還付になる例</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/jun-kakutei-shinkoku-toha.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">準確定申告は、亡くなった方のその年1月1日から死亡日までの所得を、相続人が代わりに申告して納税する手続きです。</p><p class="a2">期限は相続の開始があったことを知った日の翌日から4か月以内（所得税法125条・国税庁No.2022）。相続税の10か月より先に来ます。必要なのは、事業所得や不動産所得があって納める税額が出る方、公的年金等の収入が400万円を超える方、給与が2,000万円を超える方などで、年末調整の済んだ給与だけなら原則要りません。年金から源泉徴収された所得税や、死亡日までに払った医療費があるときは、申告すると還付を受けられます。還付だけが目的なら4か月を過ぎても出せます。提出先は亡くなった方の死亡当時の納税地の税務署です。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">準確定申告とは、亡くなった方の最後の確定申告</a></li><li><a href="#410">期限は4か月。相続税の10か月より先に来る</a></li><li><a href="#_2">必要な人と、要らない人</a></li><li><a href="#2">還付になりやすいのは、この2つ</a></li><li><a href="#_3">相続人が複数のとき。付表と連署</a></li><li><a href="#_4">事業をしていた方は、消費税の準確定申告も</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p>身内が亡くなったあと、相続税より先に来る税金の手続きがあります。準確定申告です。亡くなった方のその年1月1日から死亡日までの所得を、相続人が代わりに申告します。期限は4か月で、相続税の10か月より半年ほど早い。ただし全員に必要なわけではなく、逆に「必要はないのに出すと戻ってくる」場合もあります。</p>

@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/katazuke/">片付けと不用品</a> › 不用品回収の料金相場と業者の選び方。軽トラック積み放題は13,000円台から</p><h1>不用品回収の料金相場と業者の選び方。軽トラック積み放題は13,000円台から</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/fuyouhin-kaishu-ryokin-gyousha.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">不用品回収の料金には3つの型があります。</p><p class="a2">品目ごと（ソファ4,000円〜、冷蔵庫4,500円〜など）、トラック積み放題（軽トラック13,200円前後〜28,800円、2トントラック34,800円〜90,000円）、基本料金＋品目です。どれも事業者が公表している下限で、階段の作業やエアコンの取り外しは別に乗ります。そして家庭から出た不用品を有料で運べるのは、市区町村の一般廃棄物収集運搬業の許可業者か、市区町村の委託を受けた業者だけです。産業廃棄物処理業の許可や古物商の許可では家庭の廃棄物を回収できません（環境省）。頼む前に市区町村の許可業者一覧で会社名を照合してください。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#3">料金は3つの型で決まる</a></li><li><a href="#_1">公表されている料金の幅</a></li><li><a href="#_2">家庭の不用品を運べるのは、許可業者か委託業者だけ</a></li><li><a href="#_3">許可の確かめ方</a></li><li><a href="#_4">トラブルの型と、その場での断り方</a></li><li><a href="#_5">自治体の粗大ごみと比べると</a></li><li><a href="#_6">まとめ</a></li></ol></details><div class="body"><p>引っ越しや実家の整理でまとめて不用品を手放すとき、分かりにくいのが料金と、頼んでいい相手かどうかです。</p>

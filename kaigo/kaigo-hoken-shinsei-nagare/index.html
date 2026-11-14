@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kaigo/">介護とシニアの暮らし</a> › 介護保険の申請から利用まで。要介護認定は申請から原則30日以内に通知が届く</p><h1>介護保険の申請から利用まで。要介護認定は申請から原則30日以内に通知が届く</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kaigo-hoken-shinsei-nagare.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">介護保険のサービスを使うには、市町村の要介護認定を受けなければなりません（介護保険法19条）。</p><p class="a2">申請できるのは65歳以上の人と、40歳以上65歳未満の医療保険加入者で、要介護状態の原因が政令で定める16の特定疾病による人です（同法9条・7条3項、施行令2条）。窓口は市区町村で、地域包括支援センターや居宅介護支援事業者に手続きを代わって行ってもらえます（同法27条1項）。申請のあと市町村の職員が面接して調査し、市町村が主治医に意見を求めます（同条2項・3項）。コンピュータの一次判定と介護認定審査会の二次判定を経て、申請のあった日から30日以内に通知されます（同条11項）。認定は申請のあった日にさかのぼって効力を生じます（同条8項）。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#65406516">申請できるのは65歳以上の人と、40歳以上65歳未満で16の特定疾病に当たる人</a></li><li><a href="#_1">窓口は市区町村。持って行く物と、代わりに出してもらう方法</a></li><li><a href="#30">申請から通知まで、原則30日以内</a></li><li><a href="#7">区分は7つ。月に使える額は区分で決まる</a></li><li><a href="#_2">認定が出たら、ケアプランを作ってサービスが始まる</a></li><li><a href="#_3">納得できないときと、状態が変わったとき</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>親の様子が変わってきて、そろそろ介護保険を、と思ったとき。手続きは市区町村への1回の申請から始まります。本人が窓口へ行けなくても、家族や地域包括支援センターが代わりに出せます。</p>

@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 空き家の固定資産税が最大6倍になる仕組み。「特定空家」「管理不全空家」の勧告で何が起きるか</p><h1>空き家の固定資産税が最大6倍になる仕組み。「特定空家」「管理不全空家」の勧告で何が起きるか</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/akiya-koteishisanzei-6bai.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">住宅の敷地は固定資産税の課税標準が200㎡までの部分で6分の1に軽減されています。</p><p class="a2">空き家が市町村から「特定空家等」または「管理不全空家等」として勧告を受け、賦課期日（1月1日）までに必要な措置をとらないと、この住宅用地の特例が外れます。よく言われる「6倍」は課税標準の話で、特例が外れた土地は商業地等として課税標準に価格の70%という上限がかかるため、税額は最大でも約4.2倍（都市計画税は約2.1倍）です。2023年12月13日施行の改正で、倒壊の危険がなくても管理が行き届かない「管理不全空家等」が対象に加わりました。解体して更地にしても同じく特例は外れます。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#6">「6倍」の正体は、住宅用地の特例が外れること</a></li><li><a href="#2">対象になる空き家は2種類</a></li><li><a href="#11">外れるのは、直さないまま1月1日を迎えたとき</a></li><li><a href="#1200150m2">計算例：土地の評価額1,200万円、150㎡の実家</a></li><li><a href="#_1">解体しても、同じことが起きる</a></li><li><a href="#_2">放置の代償は、税金だけではない</a></li><li><a href="#_3">まとめ</a></li></ol></details><div class="body"><p>「空き家にしておくと固定資産税が6倍になる」という話は、半分だけ本当です。6倍になるのは税額ではなく<strong>課税標準</strong>で、特例が外れた土地の課税標準には価格の70%という上限があるため、<strong>税額は上がっても約4.2倍</strong>（都市計画税は約2.1倍）です。しかも空き家になった瞬間ではなく、市町村の勧告を受けて、直さないまま1月1日を迎えた場合に外れます。</p>

@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 墓じまいとは。費用・流れ・期間の全体像と、最初に決めること</p><h1>墓じまいとは。費用・流れ・期間の全体像と、最初に決めること</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/hub_haka.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">墓じまいとは、今のお墓から遺骨を取り出して墓石を撤去し、墓地の区画を管理者に返したうえで、遺骨を別の場所に移すことです。</p><p class="a2">法律上の名前は「改葬」で、現在お墓がある市区町村の改葬許可を受けて進めます（墓地、埋葬等に関する法律）。費用は3つに分かれ、墓石の撤去・整地が1㎡あたり6.5万円〜（新潟県の公表価格・税別。2㎡の区画で13万〜30万円が目安）、手続きとお寺への費用が改葬許可（無料〜数百円・自治体による）・閉眼供養のお布施3万〜10万円・離檀料3万〜20万円、新しい納骨先が公営の合葬施設なら1体1万円前後〜6万円程度、樹木葬の平均71.7万円、一般墓の平均152.0万円（2026年調査）。総額の目安は35万〜150万円で、差の大半は納骨先で決まります。期間は相談から納骨まで2〜3か月が目安。最初に決めるのは新しい納骨先で、それが決まると総額も改葬許可の申請もできるようになります。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">墓じまいとは何か</a></li><li><a href="#3">費用は3つに分かれる</a></li><li><a href="#6">流れ（6つ）</a></li><li><a href="#23">期間は2〜3か月</a></li><li><a href="#_2">最初に決めるのは納骨先</a></li><li><a href="#_3">放っておくとどうなるか</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>墓じまいは何をすることで、いくらかかり、どう進むのか。押さえるのは<strong>定義・費用の3区分・流れ・期間・最初に決めること</strong>です。</p>

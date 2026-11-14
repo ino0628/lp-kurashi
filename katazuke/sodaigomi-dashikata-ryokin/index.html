@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/katazuke/">片付けと不用品</a> › 粗大ごみの出し方と料金。申し込みから収集まで1〜2週間、持ち込みは10kg140円の市も</p><h1>粗大ごみの出し方と料金。申し込みから収集まで1〜2週間、持ち込みは10kg140円の市も</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/sodaigomi-dashikata-ryokin.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">粗大ごみは「申し込み → 手数料券（シール）を買う → 収集日の朝に出す」の3手順です。</p><p class="a2">手数料は品目ごとに決まっていて、大阪市は1点200円・400円・700円・1,000円の4区分、札幌市は布団（3枚まで）200円からスプリング付きマットレス1,800円まで、さいたま市は粗大ごみ1品550円です。手数料券は申し込みの後に買います（買った後の払い戻しはできません・福岡市）。収集は申し込みから1〜2週間かかります。急ぐなら自分で施設へ運ぶ手があり、福岡市は10kgまでごとに140円、札幌市は10kgあたり210円です。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">粗大ごみかどうかは、住んでいる市が決めている</a></li><li><a href="#3">申し込みから収集まで、手順は3つ</a></li><li><a href="#3_1">手数料の例。同じマットレスでも市で3倍違う</a></li><li><a href="#_2">持ち込み（自己搬入）で安くなる市がある</a></li><li><a href="#4">家電4品目とパソコンは、粗大ごみに出せない</a></li><li><a href="#_3">「無料回収」の業者に頼む前に、許可を確かめる</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>捨てると決めたソファが、部屋の隅で半年待っている。粗大ごみが止まるのは、出し方より「いくらかかるのか」「いつ取りに来るのか」が分からないからですよね。</p>

@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kaigo/">介護とシニアの暮らし</a> › 老人ホームの種類は8つ。公的4つと民間4つの違い、入れる条件と選ぶ順番</p><h1>老人ホームの種類は8つ。公的4つと民間4つの違い、入れる条件と選ぶ順番</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/roujin-home-shurui-erabikata.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">老人ホームは、法律に施設そのものが書かれた公的な4つ（特別養護老人ホーム・介護老人保健施設・介護医療院・軽費老人ホーム）と、届出・登録・指定で運営される民間の4つ（介護付有料老人ホーム・住宅型有料老人ホーム・サービス付き高齢者向け住宅・認知症グループホーム）に分かれます。</p><p class="a2">入れる条件は違い、特養は原則要介護3以上（介護保険法8条22項・施行規則17条の9）、介護老人保健施設と介護医療院は要介護1以上（同法48条1項）、グループホームは要支援2以上で認知症であること（同法8条20項・8条の2第15項）、サービス付き高齢者向け住宅は60歳以上か認定を受けた60歳未満の人です。選ぶ順番は、要介護度、医療の必要、予算、場所、見学の5つです。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#44">老人ホームは、根拠になる法律で公的4つと民間4つに分かれる</a></li><li><a href="#43">公的な4つ。特養は原則要介護3以上、老健は家に帰るための施設</a></li><li><a href="#4">民間の4つ。分かれ目は「介護を誰がするか」</a></li><li><a href="#4_1">入居の条件は、要介護度・年齢・認知症・地域の4つで決まる</a></li><li><a href="#_1">選ぶ順番は、要介護度→医療→予算→場所→見学</a></li><li><a href="#3">探す窓口は3つ。地域包括支援センターと市区町村と公表システム</a></li><li><a href="#_2">まとめ</a></li></ol></details><div class="body"><p>「<a href="https://kurashi-annai.com/kaigo/roujin-home-hiyou-souba/">老人ホーム</a>」と一口に言っても、中身は8種類あります。名前が似ているうえに、パンフレットには法律上の呼び名が書かれていないので、比べているつもりで違う土俵の物を並べていることがよくあります。</p>

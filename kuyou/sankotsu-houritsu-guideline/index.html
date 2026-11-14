@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 散骨は法律でどう扱われる？ 墓地埋葬法に禁止規定はなく、刑法190条と条例で決まる</p><h1>散骨は法律でどう扱われる？ 墓地埋葬法に禁止規定はなく、刑法190条と条例で決まる</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/sankotsu-houritsu-guideline.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">散骨を直接禁じる規定は、墓地埋葬法にはありません。</p><p class="a2">東京都保健医療局は国の見解として「墓地、埋葬等に関する法律においてこれを禁止する規定はない。」と紹介しています。同法4条1項が禁じているのは墓地以外での埋葬と焼骨の埋蔵で、粉状にして撒く散骨は埋蔵にあたりません。ただし刑法190条は遺骨を遺棄した者を三年以下の拘禁刑と定めています。厚生労働省の「散骨に関するガイドライン（散骨事業者向け）」は、焼骨を視認できないよう粉状に砕くこと、海洋なら海岸から一定の距離以上離れた海域で行うことを求めています。長沼町（11条）や秩父市（36条）のように条例で制限する自治体もあり、お墓から出して散骨する場合の手続きは区市町村で扱いが分かれます。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#3">散骨は「法律・国のガイドライン・条例」の3層で決まる</a></li><li><a href="#190">墓地埋葬法に禁止規定はない。効くのは刑法190条</a></li><li><a href="#_1">国のガイドラインが事業者に求めていること</a></li><li><a href="#_2">条例やガイドラインで制限している自治体がある</a></li><li><a href="#_3">お墓から出して散骨するなら、手続きは市区町村で分かれる</a></li><li><a href="#392530">海洋散骨の公表価格は、代行で3万〜9万円、貸切で25万〜30万円</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>「散骨は違法なのか」。散骨を直接禁じた条文はありません。ただし効いてくるルールは3つの層に分かれ、どこで撒くかで当たる層が変わります。</p>

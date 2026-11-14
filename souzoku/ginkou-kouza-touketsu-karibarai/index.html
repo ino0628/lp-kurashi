@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/souzoku/">相続と手続き</a> › 亡くなった人の銀行口座はいつ凍結される？ 解除の書類と仮払い150万円まで</p><h1>亡くなった人の銀行口座はいつ凍結される？ 解除の書類と仮払い150万円まで</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/ginkou-kouza-touketsu-karibarai.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">亡くなった人の口座が止まるのは、銀行がその死亡を知ったときです。</p><p class="a2">全国銀行協会は、相続の連絡と同時に、亡くなられたお客さまの口座での取引（預金の入出金等）は原則として制限されると案内しています。公共料金や家賃の引き落としも止まるので、連絡の前に引き落としの一覧を確かめてください。遺産分割が終わる前でも、1口座あたり（定期預金は明細ごと）「相続開始時の預金額×1/3×その相続人の法定相続分」の額までは、家庭裁判所の判断を経ずに払戻しを受けられます（民法909条の2）。同じ金融機関からの払戻しは150万円が上限です（法務省令）。解除に必要な書類は、遺言書があるか、遺産分割協議書があるかで分かれます。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">口座が止まるのは、銀行が死亡を知ったとき</a></li><li><a href="#_2">止まると、引き落としも通らなくなる</a></li><li><a href="#1150">遺産分割の前でも引き出せる。1口座あたりの計算と150万円の上限</a></li><li><a href="#_3">解除（払戻し・名義変更）に必要な書類</a></li><li><a href="#_4">戸籍の束を何度も出さなくて済む「法定相続情報一覧図」</a></li><li><a href="#_5">凍結される前に引き出すと、あとで困ること</a></li><li><a href="#_6">まとめ</a></li></ol></details><div class="body"><p>葬儀の費用を親の口座から出すつもりでいたのに、窓口で止められた。口座が止まる合図は死亡届でも役所の通知でもなく、銀行がその死亡を知ったときです。</p>

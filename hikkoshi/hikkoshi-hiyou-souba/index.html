@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/" class="on">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/" class="on">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車・その他</a> › 引っ越し費用の相場と業者の選び方。キャンセル料は当日で最大50%、3月は通常月の約2倍</p><h1>引っ越し費用の相場と業者の選び方。キャンセル料は当日で最大50%、3月は通常月の約2倍</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/hikkoshi-hiyou-souba.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">引っ越し代は、運送そのものの対価である「運賃」と、荷造り・開梱・不用品の処理などの附帯サービスの対価である「料金」に分かれます（貨物自動車運送事業法10条2項3号）。</p><p class="a2">解約手数料の上限は、受取日の前々日で見積運賃等の20%、前日で30%、当日で50%です。受取日の3日前までに伝えればかかりません（標準引越運送約款21条1項）。解約手数料の計算に入る料金は、積込み・取卸し・搬出・搬入・荷造り・開梱に要するものだけです（同21条2項1号）。公表額では、赤帽首都圏軽自動車運送協同組合が軽トラック1台の引越運賃を作業2時間以内・20km以内で14,300円、日本通運が単身パックLを30,800円（税込）からとしています。3月の引越件数は通常月の約2倍です（国土交通省）。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">引っ越し代は「運賃」と「料金」に分かれている</a></li><li><a href="#_2">公表されている料金で下限をつかむ</a></li><li><a href="#3">3月と土日は高い。割増の額も出ている</a></li><li><a href="#91">見積書の9項目。金額が上がるのは1つの場合だけ</a></li><li><a href="#50">キャンセル料は前々日から。当日は最大50%</a></li><li><a href="#_3">頼む会社の選び方と、壊れたときの期限</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>引っ越しの見積は、同じ荷物でも会社と日にちで変わります。ただ変わり方には決まりがあり、国が公示した約款と、会社が公表している運賃料金表から読み取れます。</p>

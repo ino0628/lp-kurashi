@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/" class="on">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/" class="on">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車・その他</a> › 車の名義変更（移転登録）の手続き。15日以内に運輸支局へ、手数料700円と相続の書類</p><h1>車の名義変更（移転登録）の手続き。15日以内に運輸支局へ、手数料700円と相続の書類</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kuruma-meigi-henkou-tetsuzuki.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">登録自動車の所有者が変わったら、その事由があった日から15日以内に移転登録を申請します（道路運送車両法13条1項）。</p><p class="a2">出す先は使用の本拠の位置を管轄する運輸支局等です。登録手数料は窓口700円、OSSなら600円（国土交通省）。主な書類は移転登録申請書・手数料納付書・譲渡証明書・新旧所有者の印鑑登録証明書（発行から3か月以内）・自動車検査証で、使用の本拠が変わって適用地域なら自動車保管場所証明書（国土交通省は「証明の日から概ね1ヶ月以内」、関東運輸局は相続の書類で「証明日より40日以内」）も要ります。軽自動車は軽自動車検査協会への自動車検査証変更記録申請で、手数料は無料です。相続では戸籍謄本か法定相続情報証明書が加わります。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#15">名義変更は15日以内の「移転登録」。出す先は運輸支局</a></li><li><a href="#_1">売買・譲渡でそろえる書類</a></li><li><a href="#700">費用は登録手数料700円とナンバープレート代</a></li><li><a href="#_2">軽自動車は「変更記録」で手数料は無料</a></li><li><a href="#_3">相続した車は、書類が増える</a></li><li><a href="#_4">自分で行くか、頼むか</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p>親の車をそのまま乗っている。中古車を個人から譲り受けたのに、車検証の名義が前の人のまま。よくある状態ですが、放っておくと税金の通知も事故のときの連絡も、前の名義の人のところへ行きます。</p>

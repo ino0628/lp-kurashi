@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/" class="on">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/katazuke/">片付けと不用品</a> › テレビ・冷蔵庫・洗濯機・エアコンの処分。粗大ごみに出せない4品目の料金と出し方</p><h1>テレビ・冷蔵庫・洗濯機・エアコンの処分。粗大ごみに出せない4品目の料金と出し方</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kaden-4hinmoku-shobun-ryokin.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">エアコン・テレビ・電気冷蔵庫（冷凍庫）・電気洗濯機（衣類乾燥機）の家庭用4品目は、特定家庭用機器再商品化法（家電リサイクル法）の対象で、市町村の粗大ごみには出せません。</p><p class="a2">かかるお金は、メーカーが決めるリサイクル料金と、小売業者が決める収集運搬料金の2つです（経済産業省）。リサイクル料金は税込1台で、エアコン550円〜990円、液晶テレビ（16V型以上）2,970円、冷蔵庫（171L以上）4,730円、洗濯機2,530円（いずれも主要メーカーの額。メーカーによってはこれより高くなります）。メーカーが分からないときの指定法人は、エアコン2,000円、冷蔵庫（大）5,600円です（家電製品協会）。自分で指定引取場所へ運べば、収集運搬料金はかかりません。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#4">4品目は粗大ごみに出せない</a></li><li><a href="#_1">リサイクル料金はメーカーとサイズで決まる</a></li><li><a href="#3">出し方は3つ。それぞれ料金の作りが違う</a></li><li><a href="#_2">自分で持ち込むときの手順（郵便局と指定引取場所）</a></li><li><a href="#_3">「無料回収」の業者に渡さない</a></li><li><a href="#_4">まだ使えるなら、捨てる前に売れるか見る</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p>引っ越し、買い替え、実家の片付け。テレビや冷蔵庫は、<a href="https://kurashi-annai.com/katazuke/sodaigomi-dashikata-ryokin/">粗大ごみ</a>には出せません。この4つだけは、法律で別の道が決められているからです。</p>

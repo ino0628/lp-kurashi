@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/" class="on">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/" class="on">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車・その他</a> › 運転免許の住所変更は手数料無料。警察署でできる持ち物と、遅れたときの罰則</p><h1>運転免許の住所変更は手数料無料。警察署でできる持ち物と、遅れたときの罰則</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/menkyo-jusho-henkou.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">運転免許証の住所・氏名・本籍が変わったら、速やかに住所地を管轄する公安委員会へ届け出ます（道路交通法94条1項）。</p><p class="a2">都道府県をまたいだときは、新しい住所地の公安委員会です。窓口は警察署と運転免許試験場（東京は運転免許更新センター、愛知は東三河運転免許センターでも可）で、手数料は無料です（警視庁・大阪府警察・愛知県警察）。持ち物は運転免許証と、新しい住所が確認できる書類（住民票の写し、マイナンバーカード、消印のある郵便物など）。本籍・氏名の変更では、本籍が記載された住民票の写しを提出します。届け出ないと更新連絡書が届かなくなり、罰則は二万円以下の罰金又は科料です（同法121条1項10号）。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#94">住所が変わったら、速やかに届け出る（道路交通法94条）</a></li><li><a href="#_1">どこでできるか。警察署でも受け付ける</a></li><li><a href="#_2">持ち物は免許証と、新しい住所が分かる物。手数料は無料</a></li><li><a href="#_3">本籍と氏名の変更も、同じ記載事項変更届</a></li><li><a href="#_4">マイナ免許証のときは、先に自治体で。ワンストップという道もある</a></li><li><a href="#_5">遅れたときの扱い。罰則の条文と、届かなくなる通知</a></li><li><a href="#_6">まとめ</a></li></ol></details><div class="body"><p>引っ越しの荷物が片づいたころに思い出すのが、運転免許証の住所です。届け出る先は市役所ではなく警察で、お金はかかりません。</p>

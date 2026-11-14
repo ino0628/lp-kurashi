@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 納骨堂の費用相場は平均81.5万円。公営は1万7,400円から。管理費と合祀までの年数</p><h1>納骨堂の費用相場は平均81.5万円。公営は1万7,400円から。管理費と合祀までの年数</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/noukotsudou-hiyou-souba.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">納骨堂は、他人の委託をうけて焼骨を収蔵するために、納骨堂として都道府県知事の許可を受けた施設です（墓地、埋葬等に関する法律2条）。</p><p class="a2">平均購入額は81.5万円（鎌倉新書2026年調査・1,267件）。ただし公営と民営で幅が違い、公営は1万7,400円〜10万6,790円（広島市は1室、静岡市は1体あたり）、民営の自動搬送式は38万〜120万円（施設の公表価格）。ほかに管理費が年0円〜1万5,000円。多くの契約に個別安置の年数があり、その後は合祀されます。合祀された焼骨は返還されません（広島市の条例は合葬墓について「返還しない」と定め、札幌市の合同納骨塚も引き取り不可）。許可・経営主体・合祀の時期・返金の規定を、契約の前に確かめてください。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#81517400120">納骨堂の平均は81.5万円。公営は1万7,400円から、民営は120万円まで</a></li><li><a href="#_1">「納骨堂」は都道府県知事の許可を受けた施設だけ</a></li><li><a href="#4">種類は4つ。値段を分けるのは参拝の形と、買う年数</a></li><li><a href="#01">管理費は年0円か1万円台。個別安置の年数が終われば合祀される</a></li><li><a href="#_2">閉鎖・破綻は実際に起きている</a></li><li><a href="#6">契約の前に確かめる6項目</a></li><li><a href="#_3">まとめ</a></li></ol></details><div class="body"><p>「納骨堂はいくらか」を調べると、10万円から150万円まで数字が並んで、自分の場合がどこに入るのか分かりません。幅が広いのは、公営と民営、そして「何年ぶん買うのか」が混ざって語られているからです。</p>

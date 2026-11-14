@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kaigo/">介護とシニアの暮らし</a> › 介護休業は通算93日を3回まで。給付金は賃金の67%、介護休暇は年5日</p><h1>介護休業は通算93日を3回まで。給付金は賃金の67%、介護休暇は年5日</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kaigo-kyugyo-seido-kyufu.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">介護休業は、要介護状態にある対象家族1人につき通算93日まで、3回まで分けて取れる休業です（育児・介護休業法11条）。</p><p class="a2">会社は申出を拒めません（同12条1項）。休業中の賃金を払う義務は会社にありませんが、雇用保険から介護休業給付金が出ます。額は休業開始時賃金日額×支給日数×67%で、対象は休業開始日から3か月を経過する日までの期間です（雇用保険法61条の4・附則12条）。申請は原則として会社がハローワークへ行います。休業とは別に、介護休暇が1年に5日（対象家族が2人以上なら10日）あり、時間単位でも取れます（育児・介護休業法16条の5）。残業免除や深夜業の制限は、介護が終わるまで何回でも請求できます。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">介護休業は「自分で介護し続けるための休み」ではない</a></li><li><a href="#9332">93日を3回まで。申し出は2週間前が目安</a></li><li><a href="#51">介護休暇は年5日。1時間単位で取れる</a></li><li><a href="#67">介護休業給付金は賃金の67%。会社経由でハローワークへ</a></li><li><a href="#_2">休まずに働き方を変える。残業免除・深夜業の制限・短時間勤務</a></li><li><a href="#20254">2025年4月に変わった点と、会社が拒めないこと</a></li><li><a href="#_3">まとめ</a></li></ol></details><div class="body"><p>親が倒れて、明日から誰が病院に行くのかという話になる。会社を辞めずに休む制度と、働き方を変える制度が法律で決まっています。</p>

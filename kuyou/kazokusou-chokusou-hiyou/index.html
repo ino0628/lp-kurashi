@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 家族葬と直葬の費用。葬儀社4社の公表価格の幅と、含まれない物・葬祭費5万円（横浜市の例）</p><h1>家族葬と直葬の費用。葬儀社4社の公表価格の幅と、含まれない物・葬祭費5万円（横浜市の例）</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kazokusou-chokusou-hiyou.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">葬儀社が公式サイトに出している税込のプラン価格は、直葬（火葬式）が99,000〜251,900円、一日葬が330,000〜438,900円、通夜のある家族葬が438,900〜548,900円です（よりそうお葬式・小さなお葬式・イオンのお葬式）。</p><p class="a2">直葬の幅が広いのは、地域限定の安いプランと、安置の場所を選ぶ上位プランが両端にあるからです。資料請求などの割引を使うと、直葬は83,600円から、家族葬は405,900円からになります。ただし定額プランを出している3社は、いずれも火葬料金を含みません。飲食・返礼品とお布施も別です。4社目の公益社は定額プランを置かず、火葬場の費用や返礼品・飲食まで含む総額の目安として、首都圏の家族葬20名で約57.5万円という事例（税込）を公表しています。国民健康保険の葬祭費は5万円（横浜市の例）、健康保険の埋葬料は50,000円です。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#4">葬儀の費用は4つに分かれる</a></li><li><a href="#_1">直葬・一日葬・家族葬の公表価格</a></li><li><a href="#_2">公表価格に含まれない物</a></li><li><a href="#_3">「家族葬だから安い」とは限らない</a></li><li><a href="#_4">支払いを軽くする公的な給付</a></li><li><a href="#_5">見積で確かめること</a></li><li><a href="#_6">まとめ</a></li></ol></details><div class="body"><p>葬儀の費用を調べると、10万円から200万円まで数字が並んで、自分の場合がどこに入るのか分かりません。幅が広いのは、葬儀社の「プラン価格」と、実際に払う「総額」が別物だからです。</p>

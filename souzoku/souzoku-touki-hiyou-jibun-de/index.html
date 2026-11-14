@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/souzoku/">相続と手続き</a> › 相続登記の費用と、自分でやる手順。登録免許税は評価額の0.4%、100万円以下の土地は免税</p><h1>相続登記の費用と、自分でやる手順。登録免許税は評価額の0.4%、100万円以下の土地は免税</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/souzoku-touki-hiyou-jibun-de.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">相続登記で必ずかかるのは2つだけです。</p><p class="a2">ひとつは登録免許税で、固定資産課税台帳に登録された価格の0.4%（国税庁No.7191）。評価額1,000万円なら4万円です。もうひとつが戸籍などの書類代で、戸籍謄本1通450円・除籍謄本1通750円・住民票1通300円（横浜市の例）。土地と建物で評価額1,000万円の実家を1人が相続するなら、自分で申請すれば5万円弱で終わります。価額100万円以下の土地は2027年3月31日までの登記なら登録免許税がかかりませんが、申請書に非課税の根拠を書かないと受けられません（法務局）。司法書士に頼む場合は、この設例で平均74,888円が上に乗ります（日本司法書士会連合会）。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#2">費用は登録免許税と書類代の2つ</a></li><li><a href="#04100">登録免許税は評価額の0.4%。計算例と、100万円以下の土地の免税</a></li><li><a href="#_1">書類代の実額。評価証明書は取らなくていいことがある</a></li><li><a href="#3">自分でやる手順と、3つの出し方</a></li><li><a href="#_2">司法書士に頼むと、いくらか</a></li><li><a href="#3_1">3年に間に合わないとき、実家を売るとき</a></li><li><a href="#_3">まとめ</a></li></ol></details><div class="body"><p>実家の名義を親から自分へ移すのに、いくらかかるのか。必ずかかるのは、登録免許税と、戸籍などの書類代の2つだけです。司法書士に頼まなければ、評価額1,000万円の実家で5万円弱で終わります。</p>

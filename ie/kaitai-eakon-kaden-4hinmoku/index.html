@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 解体するとき、エアコンや冷蔵庫はどうする？ 家電4品目は「残置物」で、処理責任は所有者にある</p><h1>解体するとき、エアコンや冷蔵庫はどうする？ 家電4品目は「残置物」で、処理責任は所有者にある</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kaitai-eakon-kaden-4hinmoku.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">エアコン・テレビ・冷蔵庫（冷凍庫）・洗濯機（衣類乾燥機）の家庭用4品目は家電リサイクル法の対象で、経済産業省は「建築物解体の際に残された廃家電4品目は残置物になります。</p><p class="a2">残置物については、所有者に処理責任があります」と示しています。つまり解体業者が建物ごと壊して処分できるものではなく、所有者が家電リサイクル法に沿って処分する必要があります。エアコンのリサイクル料金自体は1台550円から2,000円程度（メーカーによる・税込。ダイキン・パナソニックは550円、シャープは990円、メーカーが分からない・存在しない場合の指定法人は2,000円）で、費用がかかるのは取り外しと運搬の方です。自分で解体したり、部品だけを外したりすると引き取ってもらえなくなるので、取り外しは解体業者に依頼するか、家電量販店などの小売業者に引き取りを頼んでください（購入した店が分からない場合は、市町村の案内する方法で処分します）。</p></div><details class="toc"><summary>この記事の流れ（6項目）</summary><ol><li><a href="#4">家電4品目は「残置物」で、責任は所有者にある</a></li><li><a href="#_1">高いのはリサイクル料金ではなく、取り外しと運搬</a></li><li><a href="#_2">自分で解体しない・部品だけ外さない</a></li><li><a href="#_3">業務用エアコンだけ、制度が違う</a></li><li><a href="#_4">見積の前に伝えること</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p>「エアコンは付いたままでいいですか」。答えは「<strong>付いたままで見積は出せるが、解体費とは別の扱いになる</strong>」です。</p>

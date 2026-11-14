@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/" class="on">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/souzoku/">相続と手続き</a> › 法定相続情報一覧図の取り方。無料で必要な通数、戸籍の束を1枚にまとめる申出の手順</p><h1>法定相続情報一覧図の取り方。無料で必要な通数、戸籍の束を1枚にまとめる申出の手順</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/houtei-souzoku-jouhou-ichiranzu.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">法定相続情報証明制度は、相続関係を一覧に表した図（法定相続情報一覧図）と戸除籍謄本等の束を登記所に提出すると、登記官が確認して認証文を付した写しを交付する制度です。</p><p class="a2">2017年5月に創設されました。写しの交付は無料で、申出書に必要通数を書けば、その分をまとめて受け取れます（法務局）。出す先は、被相続人の本籍地（死亡時の本籍）・最後の住所地・申出人の住所地・被相続人名義の不動産の所在地を管轄する登記所のどれかで、窓口でも郵送でもかまいません。使えるのは相続登記、預金の払戻し、相続税の申告、死亡に起因する年金等の手続きなどです（法務局は「など、様々なもの」と書いています）。一覧図は5年間保存され、その間は再交付を受けられますが、受けられるのは申出書に「申出人」と書いた人だけです。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#1">戸籍の束を1枚にする、無料の証明</a></li><li><a href="#_1">申出できる人と、代理を頼める人</a></li><li><a href="#_2">そろえる書類と、取る場所</a></li><li><a href="#_3">一覧図の書き方は、法務局の記載例のとおりに</a></li><li><a href="#45">出す先は4つから選べる。再交付は5年以内</a></li><li><a href="#_4">使える手続きと、使えない場面</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p>銀行が2つ、証券会社が1つ、それに法務局と税務署。相続の手続きは窓口の数だけあって、そのたびに戸籍の束を出すことになります。法定相続情報一覧図は、その束を1枚の証明に置き換えるための書類です。</p>

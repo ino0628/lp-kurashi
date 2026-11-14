@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 空き家の解体補助金、5市の実例。交付決定前の契約・着工は対象外</p><h1>空き家の解体補助金、5市の実例。交付決定前の契約・着工は対象外</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/hub_kaitai.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">空き家の解体に対する補助は市区町村ごとの制度で、名古屋市は工事費の3分の1・上限40万円（判定が125点以上なら3分の2・上限80万円）、札幌市は上限50万円（地域連携型の上限150万円は、令和8年度は令和9年度以降の交付申請を目指す案件の協議・相談を受け付ける枠）、北九州市は上限30万円、福島市は特定空家等で5分の4・上限150万円、新潟市は未接道地に建つ空き家の解体などで3分の1・上限50万円ですが令和8年度分は8月28日に受付を終了しました。</p><p class="a2">5市すべてに共通するのは、交付決定より前に着工した工事は対象外になることです。札幌市と福島市は「契約」の時点でも対象外と明記しています。もう一つの共通点は年度予算の先着で、福島市の特定空家等の枠と新潟市はすでに受付を終了しています。順番は「自治体に確認 → 事前確認・判定 → 見積 → 申請 → 交付決定 → 契約・着工」です。</p></div><details class="toc"><summary>この記事の流れ（5項目）</summary><ol><li><a href="#_1">実際に出すのは市区町村、土台は国の制度</a></li><li><a href="#5">5市の実例</a></li><li><a href="#52">5市すべてに共通する2つのルール</a></li><li><a href="#_2">申請から着工までの順番</a></li><li><a href="#_3">まとめ</a></li></ol></details><div class="body"><p>「空き家の解体に補助金は出ますか」。答えは市区町村によって違う、が正確です。ただ、制度がある自治体には共通するルールが2つあります。<strong>交付決定より前に着工すると、補助は一切出ません</strong>（札幌市と福島市は契約の時点で対象外）。そして<strong>年度の予算内で先着</strong>（危険度の高い順、抽選のところもあります）。つまり順番は、自治体に確認してから見積を取り、申請して交付決定を受けてから契約・着工、です。</p>

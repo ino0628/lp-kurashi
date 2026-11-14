@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/" class="on">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kaigo/">介護とシニアの暮らし</a> › 介護保険の住宅改修は生涯20万円まで。1割なら18万円が戻り、着工前の申請が要る</p><h1>介護保険の住宅改修は生涯20万円まで。1割なら18万円が戻り、着工前の申請が要る</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/kaigo-jutaku-kaishu-hojo.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">介護保険には、自宅に手すりを付けるなどの工事に使える住宅改修費があります。</p><p class="a2">要介護の人は居宅介護住宅改修費（介護保険法45条）、要支援の人は介護予防住宅改修費（同57条）で、支給限度基準額はどちらも一人20万円。20万円の工事をした場合の保険給付は通常18万円です（老企第42号）。2割の人は上限16万円、3割は上限14万円。対象は手すりの取付け、段差の解消、床または通路面の材料の変更、引き戸等への扉の取替え、洋式便器等への便器の取替え、これらに付帯して必要となる住宅改修の6種類です（厚生省告示第95号）。限度額の範囲内なら複数回に分けられます。要介護状態区分が3段階以上上がったときは1回だけ、転居したときは改めて20万円まで使えます。着工前に市区町村へ申請するのが原則です。</p></div><details class="toc"><summary>この記事の流れ（6項目）</summary><ol><li><a href="#6">対象になるのは6種類の工事。手すり・段差・床材・扉・便器と、その付帯工事</a></li><li><a href="#20118">20万円は「一人・生涯」。1割の人なら18万円が戻る</a></li><li><a href="#_1">順番が命。着工前に市区町村へ申請する</a></li><li><a href="#_2">償還払いと受領委任払い。手元のお金の要り方が変わる</a></li><li><a href="#2">同じ家に2人いるとき、限度額はどう数えるか</a></li><li><a href="#_3">まとめ</a></li></ol></details><div class="body"><p>親が段差でつまずくようになった、浴室が怖くなってきた。手すりを付けようと見積を取り始めると、そこで初めて「介護保険が使えるらしい」と知ることがあります。使えます。ただし順番があり、工事に取りかかる前に市区町村へ申請するのが原則です。</p>

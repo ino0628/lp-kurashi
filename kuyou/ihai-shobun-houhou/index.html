@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 位牌の処分方法。閉眼供養のあとお焚き上げ1柱3,300円〜、永代供養は3万円から</p><h1>位牌の処分方法。閉眼供養のあとお焚き上げ1柱3,300円〜、永代供養は3万円から</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/ihai-shobun-houhou.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">位牌の手放し方は、閉眼供養（魂抜き）をしてからお焚き上げか永代供養に出す、が基本の道です。</p><p class="a2">僧侶を呼ぶ閉眼供養は33,000円から（涙そうそう）。お焚き上げは、お寺に持参すると1霊位10,000円・2霊位目から5,000円（妙法寺）、郵送なら1柱3,300円（涙そうそう）。家まで取りに来てもらう訪問回収なら1柱11,000円から（一休堂）です。お寺に預ける位牌の永代供養は1本30,000円・追加1本3,000円（宝徳寺）、一基5万円からで永代供養は30万円から（速成寺）。位牌の捨て方を定めた法律はありません。ただし枚方市のように「位牌は不可」と名指しする市があります。浄土真宗は位牌を用いません。</p></div><details class="toc"><summary>この記事の流れ（7項目）</summary><ol><li><a href="#_1">「勝手に捨てない」のは慣習。ただし名指しで断る市もある</a></li><li><a href="#2">手順は2つ。お寺で閉眼供養、そのあとお焚き上げ</a></li><li><a href="#130000">お寺に預ける「位牌の永代供養」は1本30,000円から</a></li><li><a href="#_2">神社のお焚き上げは、仏教の物を受けないことがある</a></li><li><a href="#_3">数が増えたら、繰り出し位牌か過去帳にまとめる</a></li><li><a href="#_4">浄土真宗は位牌を用いない。代わりは過去帳</a></li><li><a href="#_5">まとめ</a></li></ol></details><div class="body"><p><a class="il" href="https://kurashi-annai.com/kuyou/butsudan-shobun-houhou-hiyou/">仏壇</a>は運び出せたのに、位牌だけが手元に残っている。木の札だと分かっていても、ごみ袋に入れる手は止まります。</p>

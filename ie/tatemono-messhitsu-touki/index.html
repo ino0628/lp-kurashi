@@ -204,6 +204,13 @@ details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
 /* 数字の桁をそろえる */
 .body td,.answer,.card span{font-variant-numeric:tabular-nums}
 .srch input{border-color:#a7b0ba}
+/* 補助金・給付金（名前＋金額＋記事へ） */
+.hjs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;border-top:1px solid var(--line)}
+.hj{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.hj b{font-size:16px;line-height:1.5;font-weight:700}
+.hj .amt{flex:0 0 auto;font-size:15px;font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums;text-align:right;max-width:52%}
+.hj:hover b{color:var(--accent)}
+@media (max-width:720px){.hjs{grid-template-columns:1fr}}
 /* 制度の変わり目（施行の時期＋何が変わるか＋記事へ） */
 .chgs{border-top:1px solid var(--line)}
 .chg{display:grid;grid-template-columns:9.5em 1fr;gap:4px 16px;padding:14px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
@@ -247,7 +254,7 @@ main .wrap{max-width:720px}.ahero img{aspect-ratio:21/9;object-fit:cover}.answer
 <body>
 <header>
 <div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
-<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
+<nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/" class="on">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li><li><a href="https://kurashi-annai.com/hojokin/">補助金・給付金</a></li></ul></nav>
 </header>
 <main><div class="wrap">
 <p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/ie/">家と土地</a> › 建物滅失登記は取り壊しから1か月以内。怠ると10万円以下の過料</p><h1>建物滅失登記は取り壊しから1か月以内。怠ると10万円以下の過料</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><figure class="ahero"><img src="https://kurashi-annai.com/img/art/tatemono-messhitsu-touki.jpg" alt="" width="1344" height="768" fetchpriority="high"></figure><div class="answer"><p class="a1">建物を取り壊したら、滅失の日から1か月以内に建物滅失登記を申請します（不動産登記法57条）。</p><p class="a2">申請するのは表題部所有者または所有権の登記名義人で、正当な理由がないのに怠ると10万円以下の過料の対象です（同法164条1項）。添えるのは解体業者が出す建物滅失証明書で、登録免許税はかかりません。法務局のサイトに申請書の様式と記載例があり、自分で申請することもオンラインで申請することもできますし、土地家屋調査士に頼むこともできます（土地家屋調査士法3条）。登記とは別に、土地の固定資産税は毎年1月1日の状況で決まるため、取り壊す時期も一緒に考えておくと無駄がありません。</p></div><details class="toc"><summary>この記事の流れ（5項目）</summary><ol><li><a href="#_1">何を、いつまでに、誰が</a></li><li><a href="#_2">過料はどう定められているか</a></li><li><a href="#_3">自分で申請するか、土地家屋調査士に頼むか</a></li><li><a href="#11">登記とは別に、税の切り替わりは「1月1日」</a></li><li><a href="#_4">まとめ</a></li></ol></details><div class="body"><p>工事が終わって<a class="il" href="https://kurashi-annai.com/ie/kaitai-sarachi-koteishisanzei/">更地</a>になっても、そこで終わりではありません。<strong>建物の登記は、壊しただけでは消えない</strong>からです。不動産登記法57条は「建物が滅失したときは、表題部所有者又は所有権の登記名義人（…）は、その滅失の日から一月以内に、当該建物の滅失の登記を申請しなければならない」と定めています。怠ると、同法164条1項により10万円以下の過料の対象です。自分で申請することもできますし、土地家屋調査士に頼むこともできます。</p>
