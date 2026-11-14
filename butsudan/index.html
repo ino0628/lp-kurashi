@@ -31,7 +31,7 @@ header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0
 .wrap{max-width:880px;margin:0 auto;padding:0 20px}
 .brand{display:flex;align-items:center;justify-content:space-between;gap:10px;height:58px}
 .brand a.name{font-weight:800;font-size:17px;color:var(--ink);text-decoration:none;white-space:nowrap;display:flex;align-items:center;gap:8px}
-.brand a.name .mark{width:26px;height:26px;border-radius:8px;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+.brand a.name .mark{width:28px;height:28px;display:inline-flex}.mk{width:100%;height:100%;display:block}
 .brand .tag{font-size:12px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 nav.hubs{border-top:1px solid var(--line);background:#fff}
 nav.hubs ul{list-style:none;margin:0 auto;padding:0 20px;display:flex;gap:2px;overflow-x:auto;max-width:880px;scrollbar-width:none}
@@ -43,14 +43,14 @@ main{padding:20px 0 40px}
 .crumb{font-size:12px;color:var(--sub);margin:0 0 12px}
 .crumb a{color:var(--sub);text-decoration:none}
 h1{font-size:25px;line-height:1.4;margin:0 0 10px;letter-spacing:.01em}
-.meta{font-size:13px;color:var(--sub);margin:0 0 16px;display:flex;gap:14px;flex-wrap:wrap}
+.meta{font-size:12.5px;color:var(--sub);margin:0 0 16px;display:flex;gap:8px;align-items:center}.meta .mk{width:18px;height:18px}
 .meta .edition{font-weight:700;color:var(--accent)}
 .banner{border-radius:var(--r);overflow:hidden;margin:0 0 18px;background:#eee}
 .banner img{width:100%;aspect-ratio:1344/768;object-fit:cover}
-.answer{background:var(--soft);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:14px 16px;margin:0 0 22px;font-size:15px}
+.answer{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;margin:0 0 22px;font-size:15.5px;line-height:1.9;box-shadow:0 1px 0 rgba(0,0,0,.02)}
 .answer b{display:block;font-size:12px;color:var(--accent);margin:0 0 4px;letter-spacing:.06em}
 .answer p{margin:0}
-.body h2{font-size:20px;margin:30px 0 12px;padding:0 0 8px;border-bottom:2px solid var(--accent)}
+.body h2{font-size:20px;margin:34px 0 12px;padding:2px 0 2px 12px;border-left:5px solid var(--accent);border-radius:2px;line-height:1.45}
 .body h3{font-size:16.5px;margin:22px 0 8px}
 .body p{margin:0 0 14px;font-size:15.5px}
 .body ul,.body ol{padding-left:22px;font-size:15.5px}
@@ -134,7 +134,7 @@ ol.order p{margin:0 0 8px;font-size:14.5px}
 .srcs ol{padding-left:18px;margin:6px 0 0}
 .srcs li{margin:0 0 4px;word-break:break-all}
 .author{display:flex;gap:14px;align-items:flex-start;font-size:13.5px;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:24px 0 0}
-.author .av{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+.author .av{flex:0 0 44px;width:44px;height:44px}
 .author b{color:var(--ink)}
 footer{border-top:1px solid var(--line);background:#fff;padding:22px 0 30px;font-size:12.5px;color:var(--sub)}
 footer .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -171,17 +171,17 @@ mark{background:#fff0b3;color:inherit;padding:0 1px;border-radius:3px}
 </head>
 <body>
 <header>
-<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark">く</span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
+<div class="wrap"><div class="brand"><a class="name" href="https://kurashi-annai.com/"><span class="mark"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></span>くらし案内ドットコム</a><span class="tag">ふだんの暮らしの困りごと、ここで分かります</span></div><form class="srch" action="https://kurashi-annai.com/search/" method="get" role="search"><input type="search" name="q" value="" placeholder="記事を検索（例：相続放棄 期限）" aria-label="記事を検索" autocomplete="off" enterkeyhint="search"><button type="submit">検索</button></form></div>
 <nav class="hubs"><ul><li><a href="https://kurashi-annai.com/ie/">家と土地</a></li><li><a href="https://kurashi-annai.com/katazuke/">片付け・不用品</a></li><li><a href="https://kurashi-annai.com/kuyou/" class="on">お墓・供養</a></li><li><a href="https://kurashi-annai.com/souzoku/">相続・手続き</a></li><li><a href="https://kurashi-annai.com/kaigo/">介護</a></li><li><a href="https://kurashi-annai.com/hikkoshi/">引っ越し・車</a></li></ul></nav>
 </header>
 <main><div class="wrap">
-<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 仏壇と位牌</p><h1>仏壇と位牌。閉眼供養はお寺、処分は自治体か業者</h1><p class="meta"><span class="edition">2026年 最新版</span><span>執筆・監修 くらし案内ドットコム事務局</span></p><div class="banner"><img src="https://kurashi-annai.com/img/hub_butsudan.jpg" alt="仏壇と位牌" width="1344" height="768" loading="lazy"></div><div class="answer"><b>結論</b><p>仏壇を処分するときは、まず菩提寺に閉眼供養（魂抜き）を頼みます。宗派や地域で呼び方が違い、お布施に決まった額はありません。供養が終わった仏壇は物として扱われ、自治体の粗大ごみに出すか、片付けの業者に処分を頼みます。位牌は菩提寺に納める、永代供養に出す、新居に移すのいずれか。新居に移すなら、移す前にお寺に相談すると開眼供養の日程まで一度に決まります。</p></div><div class="body"><p>仏壇と位牌は、片付けの中でいちばん「後回し」になりやすい物です。決めるのは3つだけです。</p>
+<p class="crumb"><a href="https://kurashi-annai.com/">くらし案内ドットコム</a> › <a href="https://kurashi-annai.com/kuyou/">お墓と供養</a> › 仏壇と位牌</p><h1>仏壇と位牌。閉眼供養はお寺、処分は自治体か業者</h1><p class="meta"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg><span>くらし案内ドットコム編集部</span></p><div class="banner"><img src="https://kurashi-annai.com/img/hub_butsudan.jpg" alt="仏壇と位牌" width="1344" height="768" loading="lazy"></div><div class="answer"><p>仏壇を処分するときは、まず菩提寺に閉眼供養（魂抜き）を頼みます。宗派や地域で呼び方が違い、お布施に決まった額はありません。供養が終わった仏壇は物として扱われ、自治体の粗大ごみに出すか、片付けの業者に処分を頼みます。位牌は菩提寺に納める、永代供養に出す、新居に移すのいずれか。新居に移すなら、移す前にお寺に相談すると開眼供養の日程まで一度に決まります。</p></div><div class="body"><p>仏壇と位牌は、片付けの中でいちばん「後回し」になりやすい物です。決めるのは3つだけです。</p>
 <ol>
 <li><strong>供養するか</strong>：仏壇を処分する・移すなら、閉眼供養（魂抜き）を菩提寺に頼む</li>
 <li><strong>どこへ</strong>：処分は自治体の粗大ごみか片付けの業者。位牌は菩提寺に納める・永代供養・新居に移す</li>
 <li><strong>いつ</strong>：片付けの日程が決まる前に、お寺に相談する</li>
 </ol>
-<p>この章では、宗派ごとの呼び方、お寺への頼み方、処分の方法と費用、神棚や遺影の扱いを書いていきます。墓じまいと一緒に相談する場合は「墓じまいと供養」の章へ。</p></div><h2 class="sec">この章の記事（2本）</h2><div class="cards"><a class="card" href="https://kurashi-annai.com/kuyou/butsudan-shobun-houhou-hiyou/"><img src="https://kurashi-annai.com/img/a_butsudan-shobun-houhou-hiyou-720.jpg" alt="" loading="lazy" width="720" height="411"><div class="t"><b>仏壇の処分方法と費用。閉眼供養はお寺、処分は4つの道。自治体なら400〜3,200円</b><span>仏壇は、先にお寺で供養してから処分します。道は4つ。自治体の粗大ごみは渋谷区400〜3,200円・大阪市1,000円・名古屋市1,000円、仏壇店は持ち込みで4…</span></div></a><a class="card" href="https://kurashi-annai.com/kuyou/ihai-shobun-houhou/"><img src="https://kurashi-annai.com/img/a_ihai-shobun-houhou-720.jpg" alt="" loading="lazy" width="720" height="411"><div class="t"><b>位牌の処分方法。閉眼供養のあとお焚き上げ1柱3,300円〜、永代供養は3万円から</b><span>位牌は閉眼供養をしてから、お焚き上げか永代供養に出します。郵送のお焚き上げは1柱3,300円、お寺に持参すると1霊位10,000円（妙法寺）。位牌の永代供養は1…</span></div></a></div><div class="author"><div class="av">く</div><div><b>この記事を書いている人</b><br>くらし案内ドットコム事務局が書いています。省庁と自治体の一次資料を必ず開き、別の担当が出典を開き直して確かめてから公開します。値段は幅で書き、一次資料の無い相場は「事業者の公表相場」と書き分けます。</div></div>
+<p>この章では、宗派ごとの呼び方、お寺への頼み方、処分の方法と費用、神棚や遺影の扱いを書いていきます。墓じまいと一緒に相談する場合は「墓じまいと供養」の章へ。</p></div><h2 class="sec">この章の記事（2本）</h2><div class="cards"><a class="card" href="https://kurashi-annai.com/kuyou/butsudan-shobun-houhou-hiyou/"><img src="https://kurashi-annai.com/img/cat_kuyou.jpg" alt="" loading="lazy" width="720" height="411"><div class="t"><b>仏壇の処分方法と費用。閉眼供養はお寺、処分は4つの道。自治体なら400〜3,200円</b><span>仏壇は、先にお寺で供養してから処分します。道は4つ。自治体の粗大ごみは渋谷区400〜3,200円・大阪市1,000円・名古屋市1,000円、仏壇店は持ち込みで4…</span></div></a><a class="card" href="https://kurashi-annai.com/kuyou/ihai-shobun-houhou/"><img src="https://kurashi-annai.com/img/cat_kuyou.jpg" alt="" loading="lazy" width="720" height="411"><div class="t"><b>位牌の処分方法。閉眼供養のあとお焚き上げ1柱3,300円〜、永代供養は3万円から</b><span>位牌は閉眼供養をしてから、お焚き上げか永代供養に出します。郵送のお焚き上げは1柱3,300円、お寺に持参すると1霊位10,000円（妙法寺）。位牌の永代供養は1…</span></div></a></div><div class="author"><div class="av"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></div><div><b>くらし案内ドットコム編集部</b><br>くらし案内ドットコム編集部が書いています。役所や自治体が出している資料を必ず開いて書き、公開の前に別の担当が出典を開き直して確かめています。値段は幅で書き、役所の資料が無い相場は「事業者の公表相場」と書き分けています。</div></div>
 </div></main>
 <footer><div class="wrap">
 <div class="cols">
