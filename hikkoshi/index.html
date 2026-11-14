@@ -21,6 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://kurashi-annai.com/#org", "name": "くらし案内ドットコム", "url": "https://kurashi-annai.com/"}, {"@type": "WebSite", "@id": "https://kurashi-annai.com/#website", "url": "https://kurashi-annai.com/", "name": "くらし案内ドットコム", "inLanguage": "ja", "publisher": {"@id": "https://kurashi-annai.com/#org"}}, {"@type": "CollectionPage", "@id": "https://kurashi-annai.com/hikkoshi/#page", "url": "https://kurashi-annai.com/hikkoshi/", "name": "引っ越し・車・その他の困りごと", "description": "実家からの引っ越しや親の呼び寄せ、車の処分と廃車、ペットの引き取り、保険金や年金の請求。暮らしの中で一度は当たる困りごとを、手続きの順番で案内します。", "inLanguage": "ja", "isPartOf": {"@id": "https://kurashi-annai.com/#website"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "くらし案内ドットコム", "item": "https://kurashi-annai.com/"}, {"@type": "ListItem", "position": 2, "name": "引っ越し・車・その他", "item": "https://kurashi-annai.com/hikkoshi/"}]}]}</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3135938323875469" crossorigin="anonymous"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-NTZ29WC1BH"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());var __tt={};try{var __q=new URLSearchParams(location.search);if(__q.get('me')==='1')localStorage.setItem('kai_internal','1');if(__q.get('me')==='0')localStorage.removeItem('kai_internal');if(localStorage.getItem('kai_internal')==='1')__tt={'traffic_type':'internal'};if(location.hostname.indexOf('kurashi-annai.com')===-1)__tt={'traffic_type':'internal'};}catch(e){}gtag("config","G-NTZ29WC1BH",Object.assign({"send_page_view":true},__tt));</script><script type="text/javascript">try{if(localStorage.getItem("kai_internal")!=="1"&&location.hostname.indexOf("kurashi-annai.com")!==-1){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "yfoi6i7z3t");}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#243b53;--sub:#5b6b7b;--line:#e6e2da;--accent:#2a7f62;--accent-dk:#2f6f4e;--bg:#fbf8f3;--card:#fff;--soft:#eaf4ef;--warm:#fff4e5;--r:16px}
 *{box-sizing:border-box}
@@ -166,6 +167,44 @@ mark{background:#fff0b3;color:inherit;padding:0 1px;border-radius:3px}
 .fchips button{border:1px solid var(--line);background:#fff;color:var(--sub);font-size:12.5px;font-weight:700;border-radius:999px;padding:4px 12px;cursor:pointer}
 .fchips button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 @media (max-width:720px){.srch button{padding:0 13px}.srch.big input{height:48px;font-size:15px}.srch.big button{height:48px}}
+/* ===== 11-14 デザイナーの UI 点検（AI 感を減らす）: 書体・文字の段・箱を減らす・印の形・開閉・数字 ===== */
+body{font-family:"Inter","Noto Sans JP","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.8;font-feature-settings:"palt" 0}
+h1{font-size:28px;line-height:1.35;font-weight:700}
+h1,h2,.tile b,.card b,.hub b{word-break:keep-all;overflow-wrap:anywhere}
+.body{font-size:16px}
+.body h2{font-size:24px;line-height:1.35;font-weight:700;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0 0 10px;margin:48px 0 16px}
+.body h3{font-size:18px;line-height:1.45;font-weight:700;border:0;padding:0;margin:28px 0 10px}
+.sec{font-size:20px;line-height:1.4;font-weight:700}
+.crumb,.meta,.ex,.chip,.srcs,footer{font-size:12px}
+.card span,.tile span,.hub span,.boxc span{font-size:14px;line-height:1.6}
+.card b{font-size:16px;line-height:1.5}
+.answer .a1{font-size:16px}.answer .a2{font-size:14px}
+/* 一覧は角丸の箱でなく、線で区切る行に */
+.cards{gap:0 32px;border-top:1px solid var(--line)}
+.card{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:16px 0}
+.card:not(:has(img)){border-top:0}.card:not(:has(img)) .t,.card .t{padding:0}
+.card img{border-radius:12px;margin:0 0 10px}
+.grid{gap:0 32px;border-top:1px solid var(--line)}
+.hub{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:14px 2px}
+.hub b{color:var(--ink);font-size:16px}
+.hub:hover b{color:var(--accent)}
+.author{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:18px 0 0}
+.tile{border-radius:12px}.tile:hover{transform:none;border-color:var(--accent)}
+/* 番号は丸の塗りをやめ、数字だけ */
+ol.order li::before{background:none;color:var(--accent);font:700 20px/40px "Inter",sans-serif;border:1px solid var(--line)}
+/* 開閉は印を1つ（下向きの山）にそろえ、開いた中身は一段沈んだ面で */
+details>summary{list-style:none;cursor:pointer;position:relative;padding-right:28px}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"";position:absolute;right:6px;top:50%;width:8px;height:8px;border-right:2px solid var(--sub);border-bottom:2px solid var(--sub);transform:translateY(-70%) rotate(45deg);transition:transform .15s}
+details[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
+.toc summary::after,.toc[open] summary::after{content:"";float:none}
+.faq details{background:none;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:14px 0;margin:0}
+.faq details[open]>p,.toc[open] ol{background:#f6f3ec;border:1px solid var(--line);border-radius:12px;padding:12px 16px 12px 32px}
+.faq details[open]>p{padding:12px 16px}
+/* 数字の桁をそろえる */
+.body td,.answer,.card span{font-variant-numeric:tabular-nums}
+.srch input{border-color:#a7b0ba}
+@media (max-width:720px){h1{font-size:24px}.body h2{font-size:20px}.cards,.grid{grid-template-columns:1fr}}
 
 </style>
 </head>
@@ -182,7 +221,7 @@ mark{background:#fff0b3;color:inherit;padding:0 1px;border-radius:3px}
 <li>ペットの引き取り・供養</li>
 <li>保険金・年金の請求</li>
 </ul>
-<p>この章の記事は、順に公開していきます。</p></div><h2 class="sec">この分類の項目</h2><div class="grid"><a class="hub" href="https://kurashi-annai.com/hikkoshi/hikkoshi-tetsuzuki-ichiran/"><b>引っ越し・呼び寄せ</b><span>記事と見積の手配へ</span></a><a class="hub" href="https://kurashi-annai.com/hikkoshi/haisha-tetsuzuki-hiyou/"><b>車の処分・廃車</b><span>記事と見積の手配へ</span></a><a class="hub" href="https://kurashi-annai.com/souzoku/nenkin-shibou-tetsuzuki/"><b>保険金・年金の請求</b><span>記事と見積の手配へ</span></a></div><h2 class="sec">引っ越し・車・その他の記事（7本）</h2><div class="cards"><a class="card" href="https://kurashi-annai.com/hikkoshi/kuruma-meigi-henkou-tetsuzuki/"><div class="t"><b>車の名義変更（移転登録）の手続き。15日以内に運輸支局へ、手数料700円と相続の書類</b><span>車の名義変更は、所有者が変わった日から15日以内に運輸支局へ出す移転登録です（道路運送車両法13条1項）。登録手数料は窓口700円、OSSなら600円。譲渡証明…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/hikkoshi-hiyou-souba/"><div class="t"><b>引っ越し費用の相場と業者の選び方。キャンセル料は当日で最大50%、3月は通常月の約2倍</b><span>引っ越し代は運賃と料金に分かれ、キャンセル料は受取日の前々日20%・前日30%・当日50%以内です（標準引越運送約款21条）。3日前までに伝えればかかりません。…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/haisha-tetsuzuki-hiyou/"><div class="t"><b>廃車の手続きと費用。永久抹消は手数料無料、一時抹消は窓口500円、重量税は永久抹消だけ戻る</b><span>廃車の手続きは3つ。解体したときの永久抹消登録と解体届出は手数料無料、乗るのをやめるだけの一時抹消登録は窓口500円・OSS 450円です（国土交通省の登録・検…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/tenshutsu-todoke-tennyu-todoke/"><div class="t"><b>転出届と転入届の出し方。転入は14日以内、転出はマイナポータルでも出せる</b><span>転入届と転居届は住み始めた日から14日以内、転出届はあらかじめ出します（住民基本台帳法22条・23条・24条）。正当な理由がなくて届け出ないと5万円以下の過料（…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/shako-shoumei-torikata-hiyou/"><div class="t"><b>車庫証明の取り方と費用。警察署に出す3種類の書類と手数料2,100〜2,400円</b><span>車庫証明（自動車保管場所証明書）は、住所地ではなく保管場所を管轄する警察署に出します。書類は申請書・所在図と配置図・使用権原の書面の3種類。手数料は都道府県で違…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/menkyo-jusho-henkou/"><div class="t"><b>運転免許の住所変更は手数料無料。警察署でできる持ち物と、遅れたときの罰則</b><span>運転免許の住所変更は「記載事項変更」。速やかに住所地を管轄する公安委員会へ届け出ます（道路交通法94条1項）。窓口は警察署や運転免許試験場で、手数料は無料。持ち…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/hikkoshi-tetsuzuki-ichiran/"><div class="t"><b>引っ越しの手続き一覧。転入届は14日以内、車検証は15日以内、抜けやすい順に</b><span>引っ越しの手続きは、期限のある物から片づけます。転入届と転居届は14日以内、転出届はあらかじめ（住民基本台帳法22条・23条・24条）。マイナンバーカードの記載…</span></div></a></div><div class="author"><div class="av"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></div><div><b>くらし案内ドットコム編集部</b><br>くらし案内ドットコム編集部が書いています。役所や自治体が出している資料を必ず開いて書き、公開の前に別の担当が出典を開き直して確かめています。値段は幅で書き、役所の資料が無い相場は「事業者の公表相場」と書き分けています。</div></div>
+<p>この章の記事は、順に公開していきます。</p></div><h2 class="sec">この分類の項目</h2><div class="grid"><a class="hub" href="https://kurashi-annai.com/hikkoshi/hikkoshi-tetsuzuki-ichiran/"><b>引っ越し・呼び寄せ</b><span></span></a><a class="hub" href="https://kurashi-annai.com/hikkoshi/haisha-tetsuzuki-hiyou/"><b>車の処分・廃車</b><span></span></a><a class="hub" href="https://kurashi-annai.com/souzoku/nenkin-shibou-tetsuzuki/"><b>保険金・年金の請求</b><span></span></a></div><h2 class="sec">引っ越し・車・その他の記事（7本）</h2><div class="cards"><a class="card" href="https://kurashi-annai.com/hikkoshi/kuruma-meigi-henkou-tetsuzuki/"><div class="t"><b>車の名義変更（移転登録）の手続き。15日以内に運輸支局へ、手数料700円と相続の書類</b><span>車の名義変更は、所有者が変わった日から15日以内に運輸支局へ出す移転登録です（道路運送車両法13条1項）。登録手数料は窓口700円、OSSなら600円。譲渡証明…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/hikkoshi-hiyou-souba/"><div class="t"><b>引っ越し費用の相場と業者の選び方。キャンセル料は当日で最大50%、3月は通常月の約2倍</b><span>引っ越し代は運賃と料金に分かれ、キャンセル料は受取日の前々日20%・前日30%・当日50%以内です（標準引越運送約款21条）。3日前までに伝えればかかりません。…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/haisha-tetsuzuki-hiyou/"><div class="t"><b>廃車の手続きと費用。永久抹消は手数料無料、一時抹消は窓口500円、重量税は永久抹消だけ戻る</b><span>廃車の手続きは3つ。解体したときの永久抹消登録と解体届出は手数料無料、乗るのをやめるだけの一時抹消登録は窓口500円・OSS 450円です（国土交通省の登録・検…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/tenshutsu-todoke-tennyu-todoke/"><div class="t"><b>転出届と転入届の出し方。転入は14日以内、転出はマイナポータルでも出せる</b><span>転入届と転居届は住み始めた日から14日以内、転出届はあらかじめ出します（住民基本台帳法22条・23条・24条）。正当な理由がなくて届け出ないと5万円以下の過料（…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/shako-shoumei-torikata-hiyou/"><div class="t"><b>車庫証明の取り方と費用。警察署に出す3種類の書類と手数料2,100〜2,400円</b><span>車庫証明（自動車保管場所証明書）は、住所地ではなく保管場所を管轄する警察署に出します。書類は申請書・所在図と配置図・使用権原の書面の3種類。手数料は都道府県で違…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/menkyo-jusho-henkou/"><div class="t"><b>運転免許の住所変更は手数料無料。警察署でできる持ち物と、遅れたときの罰則</b><span>運転免許の住所変更は「記載事項変更」。速やかに住所地を管轄する公安委員会へ届け出ます（道路交通法94条1項）。窓口は警察署や運転免許試験場で、手数料は無料。持ち…</span></div></a><a class="card" href="https://kurashi-annai.com/hikkoshi/hikkoshi-tetsuzuki-ichiran/"><div class="t"><b>引っ越しの手続き一覧。転入届は14日以内、車検証は15日以内、抜けやすい順に</b><span>引っ越しの手続きは、期限のある物から片づけます。転入届と転居届は14日以内、転出届はあらかじめ（住民基本台帳法22条・23条・24条）。マイナンバーカードの記載…</span></div></a></div><div class="author"><div class="av"><svg class="mk" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="var(--accent)"/><path d="M8 15.6 16 9l8 6.6V23.6a1.4 1.4 0 0 1-1.4 1.4H19v-5.2h-6V25H9.4A1.4 1.4 0 0 1 8 23.6z" fill="#fff"/><circle cx="22.6" cy="9.6" r="2.4" fill="#f3d58a"/></svg></div><div><b>くらし案内ドットコム編集部</b><br>くらし案内ドットコム編集部が書いています。役所や自治体が出している資料を必ず開いて書き、公開の前に別の担当が出典を開き直して確かめています。値段は幅で書き、役所の資料が無い相場は「事業者の公表相場」と書き分けています。</div></div>
 </div></main>
 <footer><div class="wrap">
 <div class="cols">
